@@ -1,0 +1,162 @@
+<BODY id="bodyId">
+
+
+    <script>
+        var msg = document.getElementById('TxtArea');
+    </script>
+
+    <script>
+        var obj = embed_reader.getOBJ(READER_TYPE._reader_type_compro);
+        obj.onResult(function (rData) {
+            switch (rData.FunctionID) {
+                case FUNCIDS._fid_adaptReader:
+                    {
+                        alert("Server is ready, you can start now!");
+                        Connect();
+                        break;
+                    }
+                case FUNCIDS._fid_initialcom:
+                    {
+                        var opst;
+                        var rel = rData.RePara_Int;
+                        if (0 == rel) {
+                            var hdev = parseInt(rData.RePara_Str);
+                            if (hdev != -1) {
+                                icdev = hdev;
+
+                                if (isComOpen == true)
+                                    break;
+                                isComOpen = true;             //Set reader link status
+
+                                //msg.value =msg.value+"Link reader ok\n";
+
+                                //Findcard();
+                                obj.reset(icdev, 10);
+                            }
+                            else {
+                                if (0 == gl_fFailedShow) {
+                                    gl_fFailedShow = 1;//set the flag whether show fail message or not
+                                    msg.value = "Link reader error\n";
+                                }
+                                //isComOpen=false;           //Set reader link failed status
+                                setInterval("Connect()", 3000);
+                            }
+                        }
+                        else
+                            msg.value = "Object load error\n";
+                        break;
+                    }
+                case FUNCIDS._fid_exit:
+                    {
+                        //msg.value =msg.value+"reader closed\n"
+                        Connect();
+                        break;
+                    }
+                case FUNCIDS._fid_resetRF:
+                    {
+                        var rel = rData.RePara_Int;
+                        if (rel == 0) {
+                            Findcard();
+                        }
+                        else {
+                            Disconnect();
+                        }
+                        break;
+                    }
+                case FUNCIDS._fid_beep:
+                    {
+                        Disconnect();
+                        break;
+                    }
+                case FUNCIDS._fid_halt:
+                    {
+                        obj.beep(icdev, 10);
+                        break;
+                    }
+                case FUNCIDS._fid_findCardStr:
+                    {
+                        var strcard = rData.RePara_Str;
+                        if (strcard != "") {
+
+                            if (hasCard == false) {
+                                hasCard = true;
+                                msg.value = msg.value + "Card ID: " + strcard + "\n";
+                                obj.halt(icdev);
+                            }
+                            else {
+                                Disconnect();
+                            }
+
+                        }
+                        else {
+                            if (0 == gl_fFailedShow) {
+                                gl_fFailedShow = 1;//set the flag whether show fail message or not
+                                msg.value = msg.value + "Found no card, put a card on the RF area now\n";
+                            }
+
+                            hasCard = false;        //Set no card status
+                            Disconnect();
+                        }
+                        break;
+                    }
+
+            }
+        }
+        );
+
+        //Link Reader
+        function Connect() {
+            try {
+                if (isComOpen == false)          //if reader link failed
+                {
+                    //alert("initialcom");
+                    obj.initialcom(100, 115200);
+                }
+            } catch (e) { alert(e.message); }
+
+            return;
+        }
+
+        // Find card
+        function Findcard() {
+            obj.findcardStr(icdev, 0);//1);     //1: multy card mode
+            gl_wantFunc = 0;
+        }
+
+        //Disconnect with reader
+        function Disconnect() {
+            iRet = obj.exit(icdev);
+            isComOpen = false; //Set unlink status
+        }
+
+
+
+        var GFUNC = {
+            readClass: 1,
+            writeClass: 2,
+            initVal: 3,
+            increment: 4,
+            decrement: 5,
+            readVal: 6,
+            updateKey: 7,
+            mifareProTest: 8,
+        };
+
+        var nRead = 0;     //The count one card repeat find
+        var hasCard = false;
+        var isComOpen = false;
+        var icdev = -1;
+        var gl_sector = 2;
+        var gl_BinBlock = 8;
+        var gl_valBlock = 9;
+        var gl_romRWLen = 10;
+        var gl_romRWAddr = 0;
+        var gl_wantFunc = 0;
+        var gl_fFailedShow = 0;
+
+
+    </script>
+
+
+
+</BODY>

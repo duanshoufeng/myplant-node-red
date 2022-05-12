@@ -1,0 +1,7 @@
+.ag-header-group-cell {
+  font-size: 30px;
+}
+
+.ag-theme-alpine-dark .ag-header-group-cell-label {
+  justify-content: center;
+}

@@ -1,0 +1,134 @@
+<div id="print_content" x-data="AluminumTrackingService()" x-init="onInit()"
+    class="flex flex-col min-w-0 w-full h-full">
+    <div class="flex flex-grow justify-center items-start sm:items-center w-full sm:w-auto py-8 px-4 sm:p-12">
+        <!-- step 1: scan the ladle bar code -->
+        <div x-show="tag === 1" class="flex w-full max-w-lg sm:w-320 mx-auto sm:mx-0 justify-center items-center">
+            <form class="w-full mb-4" @submit.prevent="onFirstSubmit()">
+                <div x-init="machineChoicesInit()" class="flex-none w-full text-left mb-4">
+                    <select x-model="selectedMachine" x-ref="machineSelector">
+                    </select>
+                    <p x-show="isMachineValid()" x-text="isMachineValid()"
+                        class="text-red-500 text-xs text-left italic">
+                    </p>
+                </div>
+                <div x-init="productChoicesInit()" class="flex-none w-full text-left mb-4">
+                    <select x-model="selectedProduct" x-ref="productSelector">
+                    </select>
+                    <p x-show="isProductValid()" x-text="isProductValid()"
+                        class="text-red-500 text-xs text-left italic">
+                    </p>
+                </div>
+                <div class="flex-none w-full text-left mb-4">
+                    <input x-model="ladleNumber" type="text" :placeholder="i18next.t('tk_ladle_number')"
+                        class="choices choices__inner mb-1 uppercase" />
+                    <p x-show="isLadleNumberValid()" x-text="isLadleNumberValid()"
+                        class="text-red-500 text-xs text-left italic pt-2">
+                    </p>
+                </div>
+                <div class="flex-none w-full text-left mb-4">
+                    <button type="submit" :disabled="isLadleNumberValid() || isMachineValid() || isProductValid()"
+                        :class="isLadleNumberValid() || isMachineValid() || isProductValid() ? 'opacity-50 cursor-not-allowed' : ''"
+                        class="w-full h-18 px-3 py-4 text-white text-3xl bg-indigo-500 rounded-md focus:outline-none duration-100 ease-in-out"
+                        x-text="i18next.t('tk_next')"></button>
+                </div>
+                <div class="flex-none w-full text-left mb-4">
+                    <button type="button" @click="onReset();"
+                        class="w-full h-18 px-3 py-4 text-white text-3xl bg-indigo-500 rounded-md focus:outline-none duration-100 ease-in-out"
+                        x-text="i18next.t('tk_reset')"></button>
+                </div>
+            </form>
+        </div>
+        <!-- step 2: aluminum export -->
+        <div x-show="tag === 2" class="flex w-full max-w-lg sm:w-320 mx-auto sm:mx-0 justify-center items-center">
+            <form class="w-full mb-4" @submit.prevent="onSecondSubmit()">
+                <div x-init="aluminumWeightChoicesInit()" class="flex-none w-full text-left mb-4">
+                    <select x-model="selectedAluminumWeight" x-ref="aluminumWeightSelector">
+                    </select>
+                    <p x-show="isAluminumWeightValid()" x-text="isAluminumWeightValid()"
+                        class="text-red-500 text-xs text-left italic">
+                    </p>
+                </div>
+                <div class="flex-none w-full text-left mb-4">
+                    <input x-model="aluminumTempBefore" type="text" :placeholder="i18next.t('tk_aluminum_temp_before')"
+                        class="choices choices__inner mb-1 uppercase" />
+                    <p x-show="isAluminumTempBeforeValid()" x-text="isAluminumTempBeforeValid()"
+                        class="text-red-500 text-xs text-left italic pt-2">
+                    </p>
+                </div>
+                <div class="flex-none w-full text-left mb-4">
+                    <input x-model="towerNumber" type="text" :placeholder="i18next.t('tk_tower_number')"
+                        class="choices choices__inner mb-1 uppercase" />
+                    <p x-show="isTowerNumberValid()" x-text="isTowerNumberValid()"
+                        class="text-red-500 text-xs text-left italic pt-2">
+                    </p>
+                </div>
+                <div class="flex-none w-full text-left mb-4">
+                    <button type="submit"
+                        :disabled="isTowerNumberValid() || isAluminumWeightValid() || isAluminumTempBeforeValid()"
+                        :class="isTowerNumberValid() || isAluminumWeightValid() || isAluminumTempBeforeValid() ? 'opacity-50 cursor-not-allowed' : ''"
+                        class="w-full h-18 px-3 py-4 text-white text-3xl bg-indigo-500 rounded-md focus:outline-none duration-100 ease-in-out"
+                        x-text="i18next.t('tk_next')"></button>
+                </div>
+                <div class="flex-none w-full text-left mb-4">
+                    <button type="button" @click="tag=1"
+                        class="w-full h-18 px-3 py-4 text-white text-3xl bg-indigo-500 rounded-md focus:outline-none duration-100 ease-in-out"
+                        x-text="i18next.t('tk_previous')"></button>
+                </div>
+            </form>
+        </div>
+        <!-- step 3: aluminum degassing -->
+        <div x-show="tag === 3" class="flex w-full max-w-lg sm:w-320 mx-auto sm:mx-0 justify-center items-center">
+            <form class="w-full mb-4" @submit.prevent="onThirdSubmit()">
+                <div class="flex-none w-full text-left mb-4">
+                    <input x-model="aluminumTempAfter" type="text" :placeholder="i18next.t('tk_aluminum_temp_after')"
+                        class="choices choices__inner mb-1 uppercase" />
+                    <p x-show="isAluminumTempAfterValid()" x-text="isAluminumTempAfterValid()"
+                        class="text-red-500 text-xs text-left italic pt-2">
+                    </p>
+                </div>
+                <div class="flex-none w-full text-left mb-4">
+                    <input x-model="degassMachineNumber" type="text"
+                        :placeholder="i18next.t('tk_degass_machine_number')"
+                        class="choices choices__inner mb-1 uppercase" />
+                    <p x-show="isDegassMachineNumberValid()" x-text="isDegassMachineNumberValid()"
+                        class="text-red-500 text-xs text-left italic pt-2">
+                    </p>
+                </div>
+                <div class="flex-none w-full text-left mb-4">
+                    <button type="submit" :disabled="isDegassMachineNumberValid() || isAluminumTempAfterValid()"
+                        :class="isDegassMachineNumberValid() || isAluminumTempAfterValid() ? 'opacity-50 cursor-not-allowed' : ''"
+                        class="w-full h-18 px-3 py-4 text-white text-3xl bg-indigo-500 rounded-md focus:outline-none duration-100 ease-in-out"
+                        x-text="i18next.t('tk_next')"></button>
+                </div>
+                <div class="flex-none w-full text-left mb-4">
+                    <button type="button" @click="tag=1"
+                        class="w-full h-18 px-3 py-4 text-white text-3xl bg-indigo-500 rounded-md focus:outline-none duration-100 ease-in-out"
+                        x-text="i18next.t('tk_previous')"></button>
+                </div>
+            </form>
+        </div>
+        <!-- step 4: aluminum charging -->
+        <div x-show="tag === 4" class="flex w-full max-w-lg sm:w-320 mx-auto sm:mx-0 justify-center items-center">
+            <form class="w-full mb-4" @submit.prevent="onFourthSubmit()">
+                <div class="flex-none w-full text-left mb-4">
+                    <input x-model="furnaceNumber" type="text" :placeholder="i18next.t('tk_furnace_number')"
+                        class="choices choices__inner mb-1 uppercase" />
+                    <p x-show="isFurnaceNumberValid()" x-text="isFurnaceNumberValid()"
+                        class="text-red-500 text-xs text-left italic pt-2">
+                    </p>
+                </div>
+                <div class="flex-none w-full text-left mb-4">
+                    <button type="submit" :disabled="isFurnaceNumberValid()"
+                        :class="isFurnaceNumberValid() ? 'opacity-50 cursor-not-allowed' : ''"
+                        class="w-full h-18 px-3 py-4 text-white text-3xl bg-indigo-500 rounded-md focus:outline-none duration-100 ease-in-out"
+                        x-text="i18next.t('tk_next')"></button>
+                </div>
+                <div class="flex-none w-full text-left mb-4">
+                    <button type="button" @click="tag=1"
+                        class="w-full h-18 px-3 py-4 text-white text-3xl bg-indigo-500 rounded-md focus:outline-none duration-100 ease-in-out"
+                        x-text="i18next.t('tk_previous')"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

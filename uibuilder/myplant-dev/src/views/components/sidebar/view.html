@@ -1,0 +1,128 @@
+<div x-data @click.away="sidebarOpen = false" class="flex flex-col w-96 h-full overflow-auto bg-gray-900">
+
+    <div class="flex items-center justify-center mt-6">
+        <img class="w-40" src="./images/brand.svg" alt="nemak" />
+    </div>
+
+    <nav class="mt-10">
+        <!-- Dashboards -->
+        <div class="w-full">
+            <div class="flex w-full py-3 pl-6">
+                <span class="font-semibold text-2xl text-blue-600" x-text="i18next.t('tk_dashboards')"></span>
+            </div>
+
+            <div class="flex flex-col">
+                <a class="flex w-full py-3 pl-16 text-xl text-gray-100 hover:bg-gray-500 hover:text-white rounded-lg"
+                    x-text="i18next.t('tk_heat_treatment_temperature_curve')"
+                    href="#/dashboards/heat-treatment-temperature-curve"></a>
+                <a class="flex w-full py-3 pl-16 text-xl text-gray-100 hover:bg-gray-500 hover:text-white rounded-lg"
+                    href="#/dashboards/pre-heating-storage">热处理前库位状态</a>
+                <a class="flex w-full py-3 pl-16 text-xl text-gray-100 hover:bg-gray-500 hover:text-white rounded-lg"
+                    x-text="i18next.t('tk_analytics')" href="#/"></a>
+            </div>
+        </div>
+        <!-- Applications -->
+        <div class="w-full">
+            <div class="flex w-full py-3 pl-6">
+                <span class="font-semibold text-2xl text-blue-600" x-text="i18next.t('tk_applications')"></span>
+            </div>
+
+            <!-- melting -->
+            <div x-data="{ open: false }" class="flex flex-col">
+                <button @click="open = !open"
+                    class="flex w-full py-3 pl-16 pr-6 text-xl text-gray-100 hover:bg-gray-500 hover:text-white rounded-lg justify-between">
+                    <span class="flex-none">
+                        <span class="font-medium" x-text="i18next.t('tk_melting')"></span>
+                    </span>
+
+                    <span class="flex-auto"></span>
+
+                    <span class="flex-none">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path x-show="! open" d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" style="display: none;"></path>
+                            <path x-show="open" d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                </button>
+
+                <div x-show="open" class="flex flex-col">
+                    <a class="flex w-full py-3 pl-24 text-xl text-gray-100 hover:bg-gray-500 hover:text-white rounded-lg"
+                        x-text="i18next.t('tk_aluminum_tracking')" href="#/melting/aluminum-tracking"></a>
+                    <a class="flex w-full py-3 pl-24 text-xl text-gray-100 hover:bg-gray-500 hover:text-white rounded-lg"
+                        x-text="i18next.t('tk_returns_weighing')" href="#/melting/returns-weighing"></a>
+                    <a class="flex w-full py-3 pl-24 text-xl text-gray-100 hover:bg-gray-500 hover:text-white rounded-lg"
+                        x-text="i18next.t('tk_melting_setting')" href="#/"></a>
+                </div>
+            </div>
+
+            <!-- trimming -->
+            <div x-data="{ open: false }" class="flex flex-col">
+                <button @click="open = !open"
+                    class="flex w-full py-3 pl-16 pr-6 text-xl text-gray-100 hover:bg-gray-500 hover:text-white rounded-lg justify-between">
+                    <span class="flex-none">
+                        <span class="font-medium" x-text="i18next.t('tk_menu_trimming')"></span>
+                    </span>
+
+                    <span class="flex-auto"></span>
+
+                    <span class="flex-none">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path x-show="! open" d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" style="display: none;"></path>
+                            <path x-show="open" d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                </button>
+
+                <div x-show="open" class="flex flex-col">
+                    <a class="flex w-full py-3 pl-24 text-xl text-gray-100 hover:bg-gray-500 hover:text-white rounded-lg"
+                        x-text="i18next.t('tk_menu_trimming_upload')" href="#/trimming/basket-unloading"></a>
+                </div>
+            </div>
+            <!-- heating -->
+            <div x-data="{ open: false }" class="flex flex-col">
+                <button @click="open = !open"
+                    class="flex w-full py-3 pl-16 pr-6 text-xl text-gray-100 hover:bg-gray-500 hover:text-white rounded-lg justify-between">
+                    <span class="flex-none">
+                        <span class="font-medium" x-text="i18next.t('tk_menu_heating')"></span>
+                    </span>
+
+                    <span class="flex-auto"></span>
+
+                    <span class="flex-none">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path x-show="! open" d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" style="display: none;"></path>
+                            <path x-show="open" d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                </button>
+
+                <div x-show="open" class="flex flex-col">
+                    <a class="flex w-full py-3 pl-24 text-xl text-gray-100 hover:bg-gray-500 hover:text-white rounded-lg"
+                        x-text="i18next.t('tk_menu_pre_heating_fifo')" href="#/heating/pre-heating-time"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- DOCUMENTATION -->
+        <div class="w-full">
+            <div class="flex w-full py-3 pl-6">
+                <span class="font-semibold text-2xl text-blue-600" x-text="i18next.t('tk_documentation')"></span>
+            </div>
+
+            <div class="flex flex-col">
+                <a class="flex w-full py-3 pl-16 text-xl text-gray-100 hover:bg-gray-500 hover:text-white rounded-lg"
+                    x-text="i18next.t('tk_change_log')" href="#/"></a>
+                <a class="flex w-full py-3 pl-16 text-xl text-gray-100 hover:bg-gray-500 hover:text-white rounded-lg"
+                    x-text="i18next.t('tk_instruction')" href="#/"></a>
+            </div>
+        </div>
+
+    </nav>
+
+</div>

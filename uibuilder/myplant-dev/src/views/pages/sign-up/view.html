@@ -1,0 +1,58 @@
+<div x-data="SignUpService()" x-init="onInit()"
+    class="flex flex-col min-w-0 w-full h-full overflow-auto dark:bg-gray-700">
+    <div class="flex flex-grow justify-center items-start sm:items-center w-full sm:w-auto py-8 px-4 sm:p-12">
+
+        <div class="flex w-full max-w-lg sm:w-320 mx-auto sm:mx-0 justify-center items-center">
+            <form class="mb-4 w-full" @submit.prevent="await onSubmit()">
+                <div class="mb-6 w-full">
+                    <div class="flex w-300">
+                        <input x-model="personId" x-ref="personId" type="text" :placeholder="i18next.t('tk_personId')"
+                            class="w-3/5 h-18 px-3 py-2 text-3xl placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                        <button type="button" @click="await getVerifyCode()" :disabled="isPersonIdValid()"
+                            :class="isPersonIdValid() ? 'opacity-50 cursor-not-allowed' : ''"
+                            x-text="i18next.t('tk_get_verify_code')" x-ref="verifyCode"
+                            class="w-2/5 px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-2xl leading-tight uppercase rounded focus:outline-none focus:ring-0 transition duration-150 ease-in-out"></button>
+                    </div>
+                    <p x-show="isPersonIdValid()" x-text="isPersonIdValid()"
+                        class="text-red-500 text-xs text-left italic pt-2">
+                    </p>
+                </div>
+                <div class="mb-6 w-full">
+                    <input x-model="verifyCode" type="text" :placeholder="i18next.t('tk_verify_code')"
+                        class="w-full h-18 px-3 py-2 text-3xl placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    <p x-show="isVerifyCodeValid()" x-text="isVerifyCodeValid()"
+                        class="text-red-500 text-xs text-left italic pt-2">
+                    </p>
+                </div>
+                <div class="mb-6">
+                    <input x-model="password" x-ref="password" type="password" :placeholder="i18next.t('tk_password')"
+                        class="w-full h-18 px-3 py-2 text-3xl placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    <p x-show="isPasswordValid()" x-text="isPasswordValid()"
+                        class="text-red-500 text-xs text-left italic pt-2">
+                    </p>
+                </div>
+                <div class="mb-6">
+                    <input x-model="passwordRepeat" x-ref="passwordRepeat" type="password"
+                        :placeholder="i18next.t('tk_password_repeat')"
+                        class="w-full h-18 px-3 py-2 text-3xl placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    <p x-show="isPasswordRepeatValid()" x-text="isPasswordRepeatValid()"
+                        class="text-red-500 text-xs text-left italic pt-2">
+                    </p>
+                </div>
+                <div class="mb-6">
+                    <button type="submit"
+                        :disabled="isPersonIdValid() || isVerifyCodeValid() || isPasswordValid() || isPasswordRepeatValid()"
+                        :class="isPersonIdValid() || isVerifyCodeValid() || isPasswordValid() || isPasswordRepeatValid() ? 'opacity-50 cursor-not-allowed' : ''"
+                        class="w-full h-18 px-3 py-4 text-white text-3xl bg-indigo-500 rounded-md focus:outline-none duration-100 ease-in-out"
+                        x-text="i18next.t('tk_sign_up')"></button>
+                </div>
+                <p class="text-sm text-center text-gray-400">
+                    <span x-text="i18next.t('tk_already_have_an_account')"></span>
+                    <a href="#/sign-in"
+                        class="font-semibold text-indigo-500 focus:text-indigo-600 focus:outline-none focus:underline"
+                        x-text="i18next.t('tk_sign_in')"></a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+@import "dropzone.css";
+@import "ag-grid.css";
+@import "textarea.css";
+@import "scrollbar.css";
+@import "animation.css";
+@import "tailwind.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* 62.5% of 16px = 10px */
+  font-size: 62.5%;
+}

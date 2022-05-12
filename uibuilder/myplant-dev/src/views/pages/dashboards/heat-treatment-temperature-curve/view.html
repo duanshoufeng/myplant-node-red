@@ -1,0 +1,32 @@
+<div x-data="HeatTreatmentTemperatureCurveService()"
+    @heat-treatment-temperature-refresh.window="await refreshTemperature($event.detail)" x-init="await onInit()"
+    class="flex items-center w-full h-full overflow-hidden dark:bg-gray-600">
+    <div class="flex w-full h-full mx-auto p-6 md:p-8 overflow-hidden">
+        <div class="flex flex-col w-full h-full overflow-hidden">
+            <div class="flex items-center justify-between w-full py-2">
+                <div class="w-full text-left text-3xl font-semibold tracking-tight leading-8 dark:text-gray-200"
+                    x-text="i18next.t('tk_heat_treatment_realtime_temperature')"></div>
+            </div>
+
+            <div class="flex flex-col flex-auto overflow-y-auto">
+                <div class="flex flex-col flex-auto bg-card shadow rounded-2xl ">
+                    <div class="my-6 text-2xl md:text-3xl font-semibold dark:text-gray-200"
+                        x-text="i18next.t('tk_heat_treatment_01')"></div>
+                    <div class="flex flex-col md:flex-row">
+                        <div class="flex-auto md:w-1/4 h-full" id="ht01Zone01"></div>
+                        <div class="flex-auto md:w-1/4 h-full" id="ht01Zone02"></div>
+                        <div class="flex-auto md:w-1/4 h-full" id="ht01Zone03"></div>
+                        <div class="flex-auto md:w-1/4 h-full" id="ht01Zone04"></div>
+                    </div>
+                    <div class="flex flex-col md:flex-row">
+                        <div class="flex-auto md:w-1/4 h-full" id="ht01Zone05"></div>
+                        <div class="flex-auto md:w-1/4 h-full" id="ht01Zone06"></div>
+                        <div class="flex-auto md:w-1/4 h-full" id="ht01Zone07"></div>
+                        <div class="flex-auto md:w-1/4 h-full"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

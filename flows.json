@@ -1,0 +1,6079 @@
+[
+    {
+        "id": "b20d92358b62714c",
+        "type": "tab",
+        "label": "api",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "645dacd42e5b46ff",
+        "type": "tab",
+        "label": "app",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "eb0f96b6af6ca2c8",
+        "type": "subflow",
+        "name": "Subflow 9",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "a5557649e9c06dfb",
+        "type": "subflow",
+        "name": "Subflow 4",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "e68425b642cc4ba1",
+        "type": "subflow",
+        "name": "Subflow 11",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "10d20120ae3b14b0",
+        "type": "subflow",
+        "name": "Subflow 10",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "966e1daa290f7a12",
+        "type": "subflow",
+        "name": "Subflow 8",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "0ecdf5ef2719c3c7",
+        "type": "subflow",
+        "name": "Subflow 7",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "b2fe1c959df19aa8",
+        "type": "subflow",
+        "name": "Subflow 6",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "17da1bdca831d5a1",
+        "type": "subflow",
+        "name": "Subflow 5",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "fb8670bbc5e8dc56",
+        "type": "subflow",
+        "name": "Subflow 3",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "72e4c9a3efc7b7f5",
+        "type": "subflow",
+        "name": "Subflow 2",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "847437b0bfbd5c46",
+        "type": "subflow",
+        "name": "Subflow 12",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "62767a1a42ab384d",
+        "type": "MSSQL-CN",
+        "tdsVersion": "7_4",
+        "name": "MyPlant",
+        "server": "172.20.96.22",
+        "port": "1433",
+        "encyption": false,
+        "trustServerCertificate": true,
+        "database": "MyPlant",
+        "useUTC": false,
+        "connectTimeout": "15000",
+        "requestTimeout": "15000",
+        "cancelTimeout": "5000",
+        "pool": "5",
+        "parseJSON": false,
+        "enableArithAbort": true
+    },
+    {
+        "id": "f8675ab2986b3127",
+        "type": "MSSQL-CN",
+        "z": "966e1daa290f7a12",
+        "tdsVersion": "7_4",
+        "name": "MyPlant",
+        "server": "172.20.96.22",
+        "port": "1433",
+        "encyption": false,
+        "trustServerCertificate": true,
+        "database": "MyPlant",
+        "useUTC": false,
+        "connectTimeout": "15000",
+        "requestTimeout": "15000",
+        "cancelTimeout": "5000",
+        "pool": "5",
+        "parseJSON": false,
+        "enableArithAbort": true
+    },
+    {
+        "id": "4dd3717b1bcbcbb0",
+        "type": "MSSQL-CN",
+        "z": "b2fe1c959df19aa8",
+        "tdsVersion": "7_4",
+        "name": "MyPlant",
+        "server": "172.20.96.22",
+        "port": "1433",
+        "encyption": false,
+        "trustServerCertificate": true,
+        "database": "MyPlant",
+        "useUTC": false,
+        "connectTimeout": "15000",
+        "requestTimeout": "15000",
+        "cancelTimeout": "5000",
+        "pool": "5",
+        "parseJSON": false,
+        "enableArithAbort": true
+    },
+    {
+        "id": "59ec2d9edacddda3",
+        "type": "MSSQL-CN",
+        "z": "17da1bdca831d5a1",
+        "tdsVersion": "7_4",
+        "name": "MyPlant",
+        "server": "172.20.96.22",
+        "port": "1433",
+        "encyption": false,
+        "trustServerCertificate": true,
+        "database": "MyPlant",
+        "useUTC": false,
+        "connectTimeout": "15000",
+        "requestTimeout": "15000",
+        "cancelTimeout": "5000",
+        "pool": "5",
+        "parseJSON": false,
+        "enableArithAbort": true
+    },
+    {
+        "id": "f6af0e9f75849807",
+        "type": "JsonWebToken_config",
+        "name": "jwt_token",
+        "secret": "YF85zCLNcz"
+    },
+    {
+        "id": "a0d7190cb2b84222",
+        "type": "MSSQL-CN",
+        "tdsVersion": "7_4",
+        "name": "NORIS",
+        "server": "172.20.96.22",
+        "port": "1433",
+        "encyption": false,
+        "trustServerCertificate": true,
+        "database": "NORIS",
+        "useUTC": false,
+        "connectTimeout": "15000",
+        "requestTimeout": "15000",
+        "cancelTimeout": "5000",
+        "pool": "5",
+        "parseJSON": false,
+        "enableArithAbort": true
+    },
+    {
+        "id": "d2c54f1a08afa03e",
+        "type": "http in",
+        "z": "eb0f96b6af6ca2c8",
+        "name": "",
+        "url": "/api/dashboard/live-ticker",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 202.25,
+        "wires": [
+            [
+                "67171e38e0c93227"
+            ]
+        ]
+    },
+    {
+        "id": "7a805e26517196a9",
+        "type": "http response",
+        "z": "eb0f96b6af6ca2c8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1491,
+        "y": 349.75,
+        "wires": []
+    },
+    {
+        "id": "22cd7ce107acaa0a",
+        "type": "MSSQL",
+        "z": "eb0f96b6af6ca2c8",
+        "mssqlCN": "62767a1a42ab384d",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "SELECT TOP (20) id\r\n,[TimeStamp]\r\n      ,[DMC]\r\n      ,[Process]\r\n      ,[Product]\r\n  FROM [MyPlant].[dbo].[Live_Ticker]",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "queryParams",
+        "paramsOptType": "none",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [],
+        "x": 1283,
+        "y": 345,
+        "wires": [
+            [
+                "7a805e26517196a9"
+            ]
+        ]
+    },
+    {
+        "id": "67171e38e0c93227",
+        "type": "function",
+        "z": "eb0f96b6af6ca2c8",
+        "name": "",
+        "func": "let token = msg.req.headers.authorization;\nif (!token || token === 'null') {\n    msg.payload = { success: 0}\n} else {\n    msg.payload = { success: 1};\n    msg.token = token;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 432.5,
+        "y": 204,
+        "wires": [
+            [
+                "c80f1899ce8a5292"
+            ]
+        ]
+    },
+    {
+        "id": "c80f1899ce8a5292",
+        "type": "switch",
+        "z": "eb0f96b6af6ca2c8",
+        "name": "",
+        "property": "payload.success",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 616.5,
+        "y": 195,
+        "wires": [
+            [
+                "15938f0e2bc0ee99"
+            ],
+            [
+                "61f9dfce89a4bf59"
+            ]
+        ]
+    },
+    {
+        "id": "15938f0e2bc0ee99",
+        "type": "http response",
+        "z": "eb0f96b6af6ca2c8",
+        "name": "",
+        "statusCode": "401",
+        "headers": {},
+        "x": 787,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "61f9dfce89a4bf59",
+        "type": "JsonWebToken",
+        "z": "eb0f96b6af6ca2c8",
+        "name": "jwt",
+        "tokenconfig": "f6af0e9f75849807",
+        "x": 776,
+        "y": 265,
+        "wires": [
+            [
+                "242e8f077a6be7ad"
+            ]
+        ]
+    },
+    {
+        "id": "d48368d2f85b47c2",
+        "type": "function",
+        "z": "eb0f96b6af6ca2c8",
+        "name": "",
+        "func": "msg.payload = msg.token;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1081,
+        "y": 345,
+        "wires": [
+            [
+                "22cd7ce107acaa0a"
+            ]
+        ]
+    },
+    {
+        "id": "242e8f077a6be7ad",
+        "type": "switch",
+        "z": "eb0f96b6af6ca2c8",
+        "name": "",
+        "property": "error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "null"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 923.5833129882812,
+        "y": 269.25,
+        "wires": [
+            [
+                "acb51a7a884504be"
+            ],
+            [
+                "d48368d2f85b47c2"
+            ]
+        ]
+    },
+    {
+        "id": "acb51a7a884504be",
+        "type": "http response",
+        "z": "eb0f96b6af6ca2c8",
+        "name": "",
+        "statusCode": "401",
+        "headers": {},
+        "x": 1098.5833129882812,
+        "y": 180.25,
+        "wires": []
+    },
+    {
+        "id": "e4f1027807bcd365",
+        "type": "http in",
+        "z": "eb0f96b6af6ca2c8",
+        "name": "",
+        "url": "/api/dashboard/heat-treatment/temperature/501/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 334,
+        "y": 344,
+        "wires": [
+            [
+                "373f281bac7ce077"
+            ]
+        ]
+    },
+    {
+        "id": "2945fda2cd8331ab",
+        "type": "http response",
+        "z": "eb0f96b6af6ca2c8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 928,
+        "y": 421,
+        "wires": []
+    },
+    {
+        "id": "373f281bac7ce077",
+        "type": "MSSQL",
+        "z": "eb0f96b6af6ca2c8",
+        "mssqlCN": "62767a1a42ab384d",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "SELECT TOP (10) [Id]\r\n      ,[TimeString]\r\n      ,[MachineNumber]\r\n      ,[MachineStation]\r\n      ,[VarName]\r\n      ,[VarValue]\r\n  FROM [dbo].[Machine_Var]\r\n  where MachineNumber = 501 and MachineStation = @station\r\n  order by TimeString desc",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "station",
+                "type": "int",
+                "valueType": "msg",
+                "value": "req.params.id",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 730,
+        "y": 444,
+        "wires": [
+            [
+                "2945fda2cd8331ab"
+            ]
+        ]
+    },
+    {
+        "id": "c9c7e40efc3b2f6d",
+        "type": "http in",
+        "z": "eb0f96b6af6ca2c8",
+        "name": "",
+        "url": "/api/dashboard/heat-treatment/temperature/501",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 333,
+        "y": 520,
+        "wires": [
+            [
+                "db7046b7b3258592"
+            ]
+        ]
+    },
+    {
+        "id": "a90ca0371b1da537",
+        "type": "http response",
+        "z": "eb0f96b6af6ca2c8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 937,
+        "y": 597,
+        "wires": []
+    },
+    {
+        "id": "db7046b7b3258592",
+        "type": "MSSQL",
+        "z": "eb0f96b6af6ca2c8",
+        "mssqlCN": "62767a1a42ab384d",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "/****** Script for SelectTopNRows command from SSMS  ******/\r\nselect * from \r\n(SELECT TOP (10) [Id]\r\n      ,[TimeString]\r\n      ,[MachineNumber]\r\n      ,[MachineStation]\r\n      ,[VarName]\r\n      ,[VarValue]\r\n  FROM [MyPlant].[dbo].[Machine_Var]\r\n  where MachineNumber = 501 and MachineStation = 1\r\n  order by Id desc) a\r\n  UNION\r\n  select * from \r\n(SELECT TOP (10) [Id]\r\n      ,[TimeString]\r\n      ,[MachineNumber]\r\n      ,[MachineStation]\r\n      ,[VarName]\r\n      ,[VarValue]\r\n  FROM [MyPlant].[dbo].[Machine_Var]\r\n  where MachineNumber = 501 and MachineStation = 2\r\n  order by Id desc) b\r\n    UNION\r\n  select * from \r\n(SELECT TOP (10) [Id]\r\n      ,[TimeString]\r\n      ,[MachineNumber]\r\n      ,[MachineStation]\r\n      ,[VarName]\r\n      ,[VarValue]\r\n  FROM [MyPlant].[dbo].[Machine_Var]\r\n  where MachineNumber = 501 and MachineStation = 3\r\n  order by Id desc) c\r\n    UNION\r\n  select * from \r\n(SELECT TOP (10) [Id]\r\n      ,[TimeString]\r\n      ,[MachineNumber]\r\n      ,[MachineStation]\r\n      ,[VarName]\r\n      ,[VarValue]\r\n  FROM [MyPlant].[dbo].[Machine_Var]\r\n  where MachineNumber = 501 and MachineStation = 4\r\n  order by Id desc) d\r\n    UNION\r\n  select * from \r\n(SELECT TOP (10) [Id]\r\n      ,[TimeString]\r\n      ,[MachineNumber]\r\n      ,[MachineStation]\r\n      ,[VarName]\r\n      ,[VarValue]\r\n  FROM [MyPlant].[dbo].[Machine_Var]\r\n  where MachineNumber = 501 and MachineStation = 5\r\n  order by Id desc) e\r\n    UNION\r\n  select * from \r\n(SELECT TOP (10) [Id]\r\n      ,[TimeString]\r\n      ,[MachineNumber]\r\n      ,[MachineStation]\r\n      ,[VarName]\r\n      ,[VarValue]\r\n  FROM [MyPlant].[dbo].[Machine_Var]\r\n  where MachineNumber = 501 and MachineStation = 6\r\n  order by Id desc) f\r\n    UNION\r\n  select * from \r\n(SELECT TOP (10) [Id]\r\n      ,[TimeString]\r\n      ,[MachineNumber]\r\n      ,[MachineStation]\r\n      ,[VarName]\r\n      ,[VarValue]\r\n  FROM [MyPlant].[dbo].[Machine_Var]\r\n  where MachineNumber = 501 and MachineStation = 7\r\n  order by Id desc) g\r\n  order by 1 desc\r\n",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [],
+        "x": 739,
+        "y": 620,
+        "wires": [
+            [
+                "a90ca0371b1da537"
+            ]
+        ]
+    },
+    {
+        "id": "4b06cfffb87a52fa",
+        "type": "http in",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "url": "/api/melting/data/duplicate",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 229.5,
+        "y": 119,
+        "wires": [
+            [
+                "d5ab3e273a036fee"
+            ]
+        ]
+    },
+    {
+        "id": "a554c84eadd3abee",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 713.5,
+        "y": 117,
+        "wires": []
+    },
+    {
+        "id": "d5ab3e273a036fee",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "duplicate dmc",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "SELECT top 1 *\nFROM [dbo].[CHQ_Melt_Feeding]\nWHERE CodeContent = @dmc",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "dmc",
+                "type": "VarChar(1000)",
+                "valueType": "msg",
+                "value": "payload.dmc",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 469.5,
+        "y": 118,
+        "wires": [
+            [
+                "a554c84eadd3abee"
+            ]
+        ]
+    },
+    {
+        "id": "d0d03e3a5a9425ac",
+        "type": "http in",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "url": "/api/melting/charge/post",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 215.5,
+        "y": 621,
+        "wires": [
+            [
+                "605ed055f5b2f327"
+            ]
+        ]
+    },
+    {
+        "id": "be08158ebdfb8d41",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 848.5,
+        "y": 616,
+        "wires": []
+    },
+    {
+        "id": "7f3098dd383dc0fb",
+        "type": "array-loop",
+        "z": "a5557649e9c06dfb",
+        "name": "array-loop",
+        "key": "al1a60a19a718526",
+        "keyType": "msg",
+        "reset": false,
+        "resetValue": "value-null",
+        "array": "array",
+        "arrayType": "msg",
+        "x": 671.5,
+        "y": 616,
+        "wires": [
+            [
+                "be08158ebdfb8d41"
+            ],
+            [
+                "618c0bea936d1b95"
+            ]
+        ]
+    },
+    {
+        "id": "618c0bea936d1b95",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "\r\n\r\nINSERT INTO [dbo].[CHQ_Melt_Feeding]\r\nVALUES (GETDATE(),@person,@machine,@dmc,@category,@weight,@batch,\r\n@level,@dry,@clean)",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "machine",
+                "type": "NVarChar(50)",
+                "valueType": "msg",
+                "value": "payload.Machine",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "person",
+                "type": "NVarChar(50)",
+                "valueType": "msg",
+                "value": "payload.Person",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "dmc",
+                "type": "VarChar(50)",
+                "valueType": "msg",
+                "value": "payload.DMC",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "category",
+                "type": "NVarChar(50)",
+                "valueType": "msg",
+                "value": "payload.Category",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "weight",
+                "type": "Float",
+                "valueType": "msg",
+                "value": "payload.Weight",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "level",
+                "type": "int",
+                "valueType": "msg",
+                "value": "payload.Level",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "dry",
+                "type": "VarChar(10)",
+                "valueType": "msg",
+                "value": "payload.IsDry",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "clean",
+                "type": "VarChar(10)",
+                "valueType": "msg",
+                "value": "payload.IsClean",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "batch",
+                "type": "int",
+                "valueType": "msg",
+                "value": "payload.BatchId",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 616.5,
+        "y": 761,
+        "wires": [
+            [
+                "7f3098dd383dc0fb"
+            ]
+        ]
+    },
+    {
+        "id": "605ed055f5b2f327",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": " msg.array = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 453,
+        "y": 616,
+        "wires": [
+            [
+                "7f3098dd383dc0fb"
+            ]
+        ]
+    },
+    {
+        "id": "bdfcc6565511e46d",
+        "type": "comment",
+        "z": "a5557649e9c06dfb",
+        "name": "重复二维码",
+        "info": "",
+        "x": 207,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f93c4012786eeca3",
+        "type": "comment",
+        "z": "a5557649e9c06dfb",
+        "name": "批次号",
+        "info": "",
+        "x": 200,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "01b55a095536355d",
+        "type": "http in",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "url": "/api/melting/data/batch",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 223.5,
+        "y": 235,
+        "wires": [
+            [
+                "b7954e2ee95d1cee"
+            ]
+        ]
+    },
+    {
+        "id": "dc7d747bf3d6f72f",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 779.5,
+        "y": 238,
+        "wires": []
+    },
+    {
+        "id": "b7954e2ee95d1cee",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "batch id",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "SELECT top 1 BatchId\nFROM [dbo].[CHQ_Melt_Feeding]\nWHERE Tower = @machine\nORDER BY BatchId DESC",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "machine",
+                "type": "NVarChar(50)",
+                "valueType": "msg",
+                "value": "payload.machine",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 461.5,
+        "y": 234,
+        "wires": [
+            [
+                "dc7d747bf3d6f72f"
+            ]
+        ]
+    },
+    {
+        "id": "fa8c2e751ba561b7",
+        "type": "comment",
+        "z": "a5557649e9c06dfb",
+        "name": "上传记录",
+        "info": "",
+        "x": 181,
+        "y": 579,
+        "wires": []
+    },
+    {
+        "id": "5e81a83d7d74fc6e",
+        "type": "http in",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "url": "/api/melting/data/all",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 199,
+        "y": 358,
+        "wires": [
+            [
+                "dc3824df5b88e739"
+            ]
+        ]
+    },
+    {
+        "id": "264e1c43057dbbbb",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 873,
+        "y": 331,
+        "wires": []
+    },
+    {
+        "id": "dc3824df5b88e739",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "msg.payload.shift = msg.payload.shift.join();\nmsg.payload.machine = msg.payload.machine.join();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 429.5,
+        "y": 369,
+        "wires": [
+            [
+                "78a691aeadc3f3e5"
+            ]
+        ]
+    },
+    {
+        "id": "78a691aeadc3f3e5",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "\nSELECT *\nFROM [dbo].[CHQ_Melt_FeedingDetail]\nWHERE \nTower IN (SELECT [value] FROM STRING_SPLIT(@machine, ',')) \nAND ShiftNo IN (SELECT CAST([value] AS INT) FROM STRING_SPLIT(@shift,',')) \nAND TimeString BETWEEN @startDate AND @endDate\n\n",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "startDate",
+                "type": "DateTime",
+                "valueType": "msg",
+                "value": "payload.startDate",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "endDate",
+                "type": "DateTime",
+                "valueType": "msg",
+                "value": "payload.endDate",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "shift",
+                "type": "VarChar(50)",
+                "valueType": "msg",
+                "value": "payload.shift",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "machine",
+                "type": "VarChar(50)",
+                "valueType": "msg",
+                "value": "payload.machine",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 637,
+        "y": 355,
+        "wires": [
+            [
+                "264e1c43057dbbbb"
+            ]
+        ]
+    },
+    {
+        "id": "f1a5a0ea6844d441",
+        "type": "comment",
+        "z": "a5557649e9c06dfb",
+        "name": "投料记录",
+        "info": "",
+        "x": 198.5,
+        "y": 311,
+        "wires": []
+    },
+    {
+        "id": "34e421c402cf6369",
+        "type": "http in",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "url": "/api/melting/data/days",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 172,
+        "y": 439,
+        "wires": [
+            [
+                "d0fdd417d06ec2a0"
+            ]
+        ]
+    },
+    {
+        "id": "415c04e93ba54dd1",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 753,
+        "y": 434,
+        "wires": []
+    },
+    {
+        "id": "4f09d6b21f3d10c5",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "SELECT  i.Tower, i.BatchId, r.returnable, i.ingot, r.returnable/(r.returnable+i.ingot) as pct\r\nFROM\r\n(SELECT Tower, BatchId,SUM(Weight) AS returnable\r\n  FROM [NORIS].[dbo].[CHQ_Melt_FeedingDetail]\r\n  where Category=N'旧料' and Tower=@tower and TimeString >= GETDATE() - @days\r\n  group by Tower, BatchId) r join \r\n  (SELECT Tower, BatchId,SUM(Weight) AS ingot\r\n  FROM [NORIS].[dbo].[CHQ_Melt_FeedingDetail]\r\n  where Category=N'新料' and Tower=@tower and TimeString >= GETDATE() - @days\r\n  group by Tower, BatchId) i on r.Tower=i.Tower and r.BatchId=i.BatchId\r\n\r\nORDER BY r.BatchId desc",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "days",
+                "type": "int",
+                "valueType": "msg",
+                "value": "payload.days",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "tower",
+                "type": "VarChar(50)",
+                "valueType": "msg",
+                "value": "payload.machine",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 579,
+        "y": 441,
+        "wires": [
+            [
+                "415c04e93ba54dd1"
+            ]
+        ]
+    },
+    {
+        "id": "d0fdd417d06ec2a0",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "msg.payload.days = Number(msg.payload.days);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380.5,
+        "y": 443,
+        "wires": [
+            [
+                "4f09d6b21f3d10c5"
+            ]
+        ]
+    },
+    {
+        "id": "1fe47266c2a4ca87",
+        "type": "http in",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "url": "/api/melting/data/days/weight",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 186,
+        "y": 512,
+        "wires": [
+            [
+                "c4b9f77daa3a804b"
+            ]
+        ]
+    },
+    {
+        "id": "0bc82f622fe4d371",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 817,
+        "y": 516,
+        "wires": []
+    },
+    {
+        "id": "cd3f095834be5d63",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "SELECT  i.Tower, i.ProductionDate, r.returnable, i.ingot, r.returnable/(r.returnable+i.ingot) as pct\r\nFROM\r\n(SELECT Tower, ProductionDate,SUM(Weight) AS returnable\r\n  FROM [NORIS].[dbo].[CHQ_Melt_FeedingDetail]\r\n  where Category=N'旧料' and Tower=@tower and TimeString >= GETDATE() - @days\r\n  group by Tower, ProductionDate) r join \r\n  (SELECT Tower, ProductionDate,SUM(Weight) AS ingot\r\n  FROM [NORIS].[dbo].[CHQ_Melt_FeedingDetail]\r\n  where Category=N'新料' and Tower=@tower and TimeString >= GETDATE() - @days\r\n  group by Tower, ProductionDate) i on r.Tower=i.Tower and r.ProductionDate=i.ProductionDate\r\n\r\nORDER BY r.ProductionDate desc",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "days",
+                "type": "int",
+                "valueType": "msg",
+                "value": "payload.days",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "tower",
+                "type": "VarChar(50)",
+                "valueType": "msg",
+                "value": "payload.machine",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 650,
+        "y": 513,
+        "wires": [
+            [
+                "0bc82f622fe4d371"
+            ]
+        ]
+    },
+    {
+        "id": "c4b9f77daa3a804b",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "msg.payload.days = Number(msg.payload.days);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 466.5,
+        "y": 514,
+        "wires": [
+            [
+                "cd3f095834be5d63"
+            ]
+        ]
+    },
+    {
+        "id": "5d1f88d945790cb9",
+        "type": "comment",
+        "z": "a5557649e9c06dfb",
+        "name": "定量炉密度管理",
+        "info": "",
+        "x": 202.5,
+        "y": 841,
+        "wires": []
+    },
+    {
+        "id": "746126be41325fed",
+        "type": "http in",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "url": "api/melting/vacuum/data",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 233,
+        "y": 936,
+        "wires": [
+            [
+                "77b5122991ac4d72"
+            ]
+        ]
+    },
+    {
+        "id": "589d47eb4194d914",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 675,
+        "y": 929,
+        "wires": []
+    },
+    {
+        "id": "77b5122991ac4d72",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "SELECT [ID]\r\n      ,DATEADD(hh, DATEDIFF(hh, GETDATE(), GETUTCDATE()), TimeString) AS TimeString\r\n      ,[Employee]\r\n      ,[Furnace]\r\n      ,[Code]\r\n      ,[Vacuum]\r\n      ,[Atmospheric]\r\n      ,[Pct]\r\n      ,[Comment]\r\nFROM [dbo].[CHQ_Dosing_Furnace_Density]\r\nWHERE TimeString >= GETDATE() - 30\r\nORDER BY ID DESC",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [],
+        "x": 471,
+        "y": 933,
+        "wires": [
+            [
+                "589d47eb4194d914"
+            ]
+        ]
+    },
+    {
+        "id": "06f0d610bc6ff1c8",
+        "type": "http in",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "url": "/api/melting/vacuum/post",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 265,
+        "y": 1006,
+        "wires": [
+            [
+                "407655596ab30175"
+            ]
+        ]
+    },
+    {
+        "id": "11675861427c21ef",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 753,
+        "y": 1001,
+        "wires": []
+    },
+    {
+        "id": "407655596ab30175",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "INSERT INTO\n[dbo].[CHQ_Dosing_Furnace_Density]\nVALUES (GETDATE(),@people,@machine,@code,@vacuumValue,@airValue,@pct, @comment)",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "machine",
+                "type": "VarChar(10)",
+                "valueType": "msg",
+                "value": "payload.Furnace",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "people",
+                "type": "NVarChar(50)",
+                "valueType": "msg",
+                "value": "payload.Employee",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "code",
+                "type": "VarChar(50)",
+                "valueType": "msg",
+                "value": "payload.Code",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "airValue",
+                "type": "Float",
+                "valueType": "msg",
+                "value": "payload.Atmospheric",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "vacuumValue",
+                "type": "Float",
+                "valueType": "msg",
+                "value": "payload.Vacuum",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "pct",
+                "type": "Float",
+                "valueType": "msg",
+                "value": "payload.Pct",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "comment",
+                "type": "NVarChar(50)",
+                "valueType": "msg",
+                "value": "payload.Comment",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 549,
+        "y": 1010,
+        "wires": [
+            [
+                "11675861427c21ef"
+            ]
+        ]
+    },
+    {
+        "id": "8fd41e6f9b699b36",
+        "type": "http in",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "url": "/api/melting/vacuum/trend",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 1077,
+        "wires": [
+            [
+                "91fb596de078990f"
+            ]
+        ]
+    },
+    {
+        "id": "e648bf0423d382e2",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 733,
+        "y": 1092,
+        "wires": []
+    },
+    {
+        "id": "91fb596de078990f",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "select Code, Pct \r\nfrom [dbo].[CHQ_Dosing_Furnace_Density]\r\nwhere Furnace = @machine AND TimeString >= GETDATE() - @days\r\nORDER BY ID DESC",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "machine",
+                "type": "VarChar(10)",
+                "valueType": "msg",
+                "value": "payload.machine",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "days",
+                "type": "int",
+                "valueType": "msg",
+                "value": "payload.days",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 525,
+        "y": 1091,
+        "wires": [
+            [
+                "e648bf0423d382e2"
+            ]
+        ]
+    },
+    {
+        "id": "c4088a9d7c815a20",
+        "type": "comment",
+        "z": "a5557649e9c06dfb",
+        "name": "铝液追溯",
+        "info": "",
+        "x": 206.5,
+        "y": 1191,
+        "wires": []
+    },
+    {
+        "id": "1ac1e5cc0664623e",
+        "type": "http in",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "url": "/api/melting/aluminum/process-step",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 224,
+        "y": 1257,
+        "wires": [
+            [
+                "24c43e47ed1c957c"
+            ]
+        ]
+    },
+    {
+        "id": "bfb46199cd0392b3",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "400",
+        "headers": {},
+        "x": 1909,
+        "y": 1332,
+        "wires": []
+    },
+    {
+        "id": "9dc036f89fc231d7",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "62767a1a42ab384d",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "\r\nSELECT * \r\nFROM [dbo].[Tool]\r\nWHERE Number = @tool\r\n",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "tool",
+                "type": "int",
+                "valueType": "msg",
+                "value": "payload.ladle",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 553,
+        "y": 1280,
+        "wires": [
+            [
+                "c330f19f9e7b14b2"
+            ]
+        ]
+    },
+    {
+        "id": "c330f19f9e7b14b2",
+        "type": "switch",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 662.5,
+        "y": 1401,
+        "wires": [
+            [
+                "619a615bc4687b6c"
+            ],
+            [
+                "944c0bd9611df151"
+            ]
+        ]
+    },
+    {
+        "id": "a4b482f581814d64",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "400",
+        "headers": {},
+        "x": 1033,
+        "y": 1310,
+        "wires": []
+    },
+    {
+        "id": "24c43e47ed1c957c",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "msg.data = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 394.5,
+        "y": 1377,
+        "wires": [
+            [
+                "9dc036f89fc231d7"
+            ]
+        ]
+    },
+    {
+        "id": "619a615bc4687b6c",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "msg.payload = {error: \"ladle number not exist\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 849.5,
+        "y": 1317,
+        "wires": [
+            [
+                "a4b482f581814d64"
+            ]
+        ]
+    },
+    {
+        "id": "944c0bd9611df151",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "62767a1a42ab384d",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "SELECT top 1 *\r\nFROM [dbo].[Set_Data]\r\nWHERE ToolNumber = @tool and ProductNumber = @product\r\nORDER BY Id DESC",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "tool",
+                "type": "int",
+                "valueType": "msg",
+                "value": "data.ladle",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "product",
+                "type": "varchar(50)",
+                "valueType": "msg",
+                "value": "data.product",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 888,
+        "y": 1417,
+        "wires": [
+            [
+                "0d88fc98c6cd9d0b"
+            ]
+        ]
+    },
+    {
+        "id": "0d88fc98c6cd9d0b",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "if (msg.payload.length === 0)  msg.nextStep = 'A';\nelse if (msg.payload[0].Sequence === 'A') msg.nextStep = 'B';\nelse if (msg.payload[0].Sequence === 'AB') msg.nextStep = 'C';\nelse msg.nextStep = 'A';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1074.5,
+        "y": 1409,
+        "wires": [
+            [
+                "26eab85b4a96d199"
+            ]
+        ]
+    },
+    {
+        "id": "26eab85b4a96d199",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "62767a1a42ab384d",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "declare @process as int;\nselect @process = ProcessNumber\nfrom [dbo].[Machine]\nwhere Number=@machine\n\nselect SequenceGood\nfrom [dbo].[Process_Step]\nwhere Number=@process and ProductNumber=@product\n",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "machine",
+                "type": "int",
+                "valueType": "msg",
+                "value": "data.machine",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "product",
+                "type": "varchar(50)",
+                "valueType": "msg",
+                "value": "data.product",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 1298,
+        "y": 1414,
+        "wires": [
+            [
+                "ec2e85349b77ec4a"
+            ]
+        ]
+    },
+    {
+        "id": "5d5ff22316c1d10f",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "if (msg.payload[0].SequenceGood !== msg.nextStep) msg.payload = {error : 'wrong process step'}\nelse msg.payload = null\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1543.5,
+        "y": 1405,
+        "wires": [
+            [
+                "3a09fae6bf88606f"
+            ]
+        ]
+    },
+    {
+        "id": "3a09fae6bf88606f",
+        "type": "switch",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "null"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1706.5,
+        "y": 1421,
+        "wires": [
+            [
+                "bfb46199cd0392b3"
+            ],
+            [
+                "bad172d4bbfd7396"
+            ]
+        ]
+    },
+    {
+        "id": "9629538271474d7f",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 2065,
+        "y": 1429,
+        "wires": []
+    },
+    {
+        "id": "bad172d4bbfd7396",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "msg.payload = { nextStep : msg.nextStep }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1902.5,
+        "y": 1435,
+        "wires": [
+            [
+                "9629538271474d7f"
+            ]
+        ]
+    },
+    {
+        "id": "ec2e85349b77ec4a",
+        "type": "switch",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1430,
+        "y": 1311,
+        "wires": [
+            [
+                "100a8b1b69978806"
+            ],
+            [
+                "5d5ff22316c1d10f"
+            ]
+        ]
+    },
+    {
+        "id": "5f131805486ed464",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "400",
+        "headers": {},
+        "x": 1743,
+        "y": 1222,
+        "wires": []
+    },
+    {
+        "id": "100a8b1b69978806",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "msg.payload = {error: \"product not in process\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1578.5,
+        "y": 1236,
+        "wires": [
+            [
+                "5f131805486ed464"
+            ]
+        ]
+    },
+    {
+        "id": "2b8e7e80e9360799",
+        "type": "http in",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "url": "/api/melting/aluminum/charging",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 251,
+        "y": 1482,
+        "wires": [
+            [
+                "6feb1b5be1165856"
+            ]
+        ]
+    },
+    {
+        "id": "c49bd4e739930a38",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1189,
+        "y": 1690,
+        "wires": []
+    },
+    {
+        "id": "6feb1b5be1165856",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "msg.data = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 396.5,
+        "y": 1557,
+        "wires": [
+            [
+                "0cc3a3b00da7769e"
+            ]
+        ]
+    },
+    {
+        "id": "0cc3a3b00da7769e",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "62767a1a42ab384d",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "select *\nfrom [dbo].[Machine]\nwhere Number = @furnace",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "furnace",
+                "type": "int",
+                "valueType": "msg",
+                "value": "data.furnace",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 586,
+        "y": 1553,
+        "wires": [
+            [
+                "85466ed278842fef"
+            ]
+        ]
+    },
+    {
+        "id": "85466ed278842fef",
+        "type": "switch",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 785,
+        "y": 1565,
+        "wires": [
+            [
+                "50beceebd7f98106"
+            ],
+            [
+                "4970d6d3bec0b559"
+            ]
+        ]
+    },
+    {
+        "id": "ba1a34257d6c1614",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "400",
+        "headers": {},
+        "x": 1142,
+        "y": 1511,
+        "wires": []
+    },
+    {
+        "id": "50beceebd7f98106",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "msg.payload = {error: \"furnace number not exist\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 952.5,
+        "y": 1533,
+        "wires": [
+            [
+                "ba1a34257d6c1614"
+            ]
+        ]
+    },
+    {
+        "id": "4970d6d3bec0b559",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "62767a1a42ab384d",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "  declare @setId as int\r\n\r\n set @setId = (select top 1 [Id] from [dbo].[Set_Data] where [ToolNumber]=@ladle and [ProductNumber]=@product order by [Id] desc)\r\n\r\n  update [dbo].[Set_Data]\r\n  set [Sequence]='ABC'\r\n  where [Id] = @setId  \r\n\r\n  insert into [dbo].[Machine_Data] \r\n  values (getdate(), @machine, @setId, @ladle, @product, @rawData)",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "furnace",
+                "type": "int",
+                "valueType": "msg",
+                "value": "data.furnace",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "ladle",
+                "type": "int",
+                "valueType": "msg",
+                "value": "data.ladle",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "machine",
+                "type": "int",
+                "valueType": "msg",
+                "value": "data.machine",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "product",
+                "type": "varchar(50)",
+                "valueType": "msg",
+                "value": "data.product",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "rawData",
+                "type": "nvarchar(max)",
+                "valueType": "msg",
+                "value": "data.rawData",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 965,
+        "y": 1688,
+        "wires": [
+            [
+                "c49bd4e739930a38"
+            ]
+        ]
+    },
+    {
+        "id": "aa39318f8fddfae8",
+        "type": "http in",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "url": "/api/melting/aluminum/export",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 226,
+        "y": 1781,
+        "wires": [
+            [
+                "1dcffb736a265fa5"
+            ]
+        ]
+    },
+    {
+        "id": "1dcffb736a265fa5",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "msg.data = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 499,
+        "y": 1809,
+        "wires": [
+            [
+                "3853f0541c260835"
+            ]
+        ]
+    },
+    {
+        "id": "9ed7c346c8e16b0a",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1272,
+        "y": 1958,
+        "wires": []
+    },
+    {
+        "id": "3853f0541c260835",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "62767a1a42ab384d",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "select *\r\n  from [dbo].[Machine]\r\n  where [Number]=@tower",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "tower",
+                "type": "int",
+                "valueType": "msg",
+                "value": "data.tower",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 543,
+        "y": 1910,
+        "wires": [
+            [
+                "40af7551e95084d4"
+            ]
+        ]
+    },
+    {
+        "id": "40af7551e95084d4",
+        "type": "switch",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 739,
+        "y": 1792,
+        "wires": [
+            [
+                "abe6378455f7f595"
+            ],
+            [
+                "2c3298596ac88ddb"
+            ]
+        ]
+    },
+    {
+        "id": "b7f35c5ff02b4afa",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "400",
+        "headers": {},
+        "x": 1107,
+        "y": 1812,
+        "wires": []
+    },
+    {
+        "id": "abe6378455f7f595",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "msg.payload = {error: \"tower number not exist\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 943.5,
+        "y": 1800,
+        "wires": [
+            [
+                "b7f35c5ff02b4afa"
+            ]
+        ]
+    },
+    {
+        "id": "2c3298596ac88ddb",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "62767a1a42ab384d",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": " insert into [dbo].[Set_Data]\r\n  values (@ladle, @product, 'A')\r\n  \r\n",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "ladle",
+                "type": "int",
+                "valueType": "msg",
+                "value": "data.ladle",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "product",
+                "type": "varchar(50)",
+                "valueType": "msg",
+                "value": "data.product",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 962,
+        "y": 1864,
+        "wires": [
+            [
+                "227c196b8919743e"
+            ]
+        ]
+    },
+    {
+        "id": "227c196b8919743e",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "62767a1a42ab384d",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "\r\n  declare @setId as int\r\n  set @setId = (select top 1 Id from [dbo].[Set_Data] where [ToolNumber]=@ladle and [ProductNumber]=@product order by Id desc)\r\n  \r\n   insert into [dbo].[Machine_Data] \r\n  values (getdate(), @machine, @setId, @ladle, @product, @rawData)",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "ladle",
+                "type": "int",
+                "valueType": "msg",
+                "value": "data.ladle",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "product",
+                "type": "varchar(50)",
+                "valueType": "msg",
+                "value": "data.product",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "machine",
+                "type": "int",
+                "valueType": "msg",
+                "value": "data.machine",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "rawData",
+                "type": "nvarchar(max)",
+                "valueType": "msg",
+                "value": "data.rawData",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 1174,
+        "y": 1870,
+        "wires": [
+            [
+                "9ed7c346c8e16b0a"
+            ]
+        ]
+    },
+    {
+        "id": "241dfe2450b4f801",
+        "type": "http in",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "url": "/api/melting/aluminum/degassing",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 246,
+        "y": 2106,
+        "wires": [
+            [
+                "8ed6c2336ae754a8"
+            ]
+        ]
+    },
+    {
+        "id": "8ed6c2336ae754a8",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "msg.data = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 509,
+        "y": 2134,
+        "wires": [
+            [
+                "5354146310e445b1"
+            ]
+        ]
+    },
+    {
+        "id": "01275fab5fafaee6",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1196,
+        "y": 2230,
+        "wires": []
+    },
+    {
+        "id": "5354146310e445b1",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "62767a1a42ab384d",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "select *\r\n  from [dbo].[Machine]\r\n  where [Number]=@degassMachine",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "degassMachine",
+                "type": "int",
+                "valueType": "msg",
+                "value": "data.degassMachine",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 553,
+        "y": 2235,
+        "wires": [
+            [
+                "62490c441e42258c"
+            ]
+        ]
+    },
+    {
+        "id": "62490c441e42258c",
+        "type": "switch",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 749,
+        "y": 2117,
+        "wires": [
+            [
+                "6fccd3096e259187"
+            ],
+            [
+                "d29b6b407d91864b"
+            ]
+        ]
+    },
+    {
+        "id": "85333a9e395e315c",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "400",
+        "headers": {},
+        "x": 1117,
+        "y": 2137,
+        "wires": []
+    },
+    {
+        "id": "6fccd3096e259187",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "msg.payload = {error: \"degass machine number not exist\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 953.5,
+        "y": 2125,
+        "wires": [
+            [
+                "85333a9e395e315c"
+            ]
+        ]
+    },
+    {
+        "id": "d29b6b407d91864b",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "62767a1a42ab384d",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "  declare @setId as int\r\n\r\n set @setId = (select top 1 [Id] from [dbo].[Set_Data] where [ToolNumber]=@ladle and [ProductNumber]=@product order by [Id] desc)\r\n\r\n  update [dbo].[Set_Data]\r\n  set [Sequence]='AB'\r\n  where [Id] = @setId  \r\n\r\n  insert into [dbo].[Machine_Data] \r\n  values (getdate(), @machine, @setId, @ladle, @product, @rawData)",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "ladle",
+                "type": "int",
+                "valueType": "msg",
+                "value": "data.ladle",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "product",
+                "type": "varchar(50)",
+                "valueType": "msg",
+                "value": "data.product",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "machine",
+                "type": "int",
+                "valueType": "msg",
+                "value": "data.machine",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "rawData",
+                "type": "nvarchar(max)",
+                "valueType": "msg",
+                "value": "data.rawData",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 972,
+        "y": 2189,
+        "wires": [
+            [
+                "01275fab5fafaee6"
+            ]
+        ]
+    },
+    {
+        "id": "fc33b47189a2f410",
+        "type": "comment",
+        "z": "a5557649e9c06dfb",
+        "name": "回炉料称重",
+        "info": "",
+        "x": 233.5,
+        "y": 2361,
+        "wires": []
+    },
+    {
+        "id": "3f7be8832602fd13",
+        "type": "http in",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "url": "/api/melting/returns/basket-weight",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 303,
+        "y": 2440,
+        "wires": [
+            [
+                "9c5a124aa1189590"
+            ]
+        ]
+    },
+    {
+        "id": "9c5a124aa1189590",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "msg.data = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 564,
+        "y": 2440,
+        "wires": [
+            [
+                "8f67d6f334fbfcde"
+            ]
+        ]
+    },
+    {
+        "id": "8f67d6f334fbfcde",
+        "type": "MSSQL",
+        "z": "a5557649e9c06dfb",
+        "mssqlCN": "62767a1a42ab384d",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "select top 1 *\r\n  from [dbo].[Basket]\r\n  where [Number]=@basketNumber",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "basketNumber",
+                "type": "int",
+                "valueType": "msg",
+                "value": "data.basketNumber",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 760,
+        "y": 2438,
+        "wires": [
+            [
+                "ac4302d68de7164a"
+            ]
+        ]
+    },
+    {
+        "id": "9f611c7d047b6910",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1173,
+        "y": 2450,
+        "wires": []
+    },
+    {
+        "id": "ac4302d68de7164a",
+        "type": "switch",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 958,
+        "y": 2411,
+        "wires": [
+            [
+                "3e92649f0767b538"
+            ],
+            [
+                "9f611c7d047b6910"
+            ]
+        ]
+    },
+    {
+        "id": "b1dd09e58cc10aa3",
+        "type": "http response",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "statusCode": "400",
+        "headers": {},
+        "x": 1275,
+        "y": 2378,
+        "wires": []
+    },
+    {
+        "id": "3e92649f0767b538",
+        "type": "function",
+        "z": "a5557649e9c06dfb",
+        "name": "",
+        "func": "msg.payload = {error: \"basket number not exist\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100.5,
+        "y": 2380,
+        "wires": [
+            [
+                "b1dd09e58cc10aa3"
+            ]
+        ]
+    },
+    {
+        "id": "b30684739b1c4dbf",
+        "type": "inject",
+        "z": "e68425b642cc4ba1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Start",
+        "payloadType": "str",
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "dd4555f299c849a7"
+            ]
+        ]
+    },
+    {
+        "id": "dd4555f299c849a7",
+        "type": "http request",
+        "z": "e68425b642cc4ba1",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=wwf32d00837d938340&corpsecret=oAK7vIu3fIGjF-5-UAuXiIHCPap2iJuIQDwuAnozyxQ",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 400,
+        "y": 140,
+        "wires": [
+            [
+                "f4fa7aff4f5662bd"
+            ]
+        ]
+    },
+    {
+        "id": "a12740d1417a5641",
+        "type": "comment",
+        "z": "e68425b642cc4ba1",
+        "name": "获取企业微信应用的access_token",
+        "info": "",
+        "x": 280,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f4fa7aff4f5662bd",
+        "type": "function",
+        "z": "e68425b642cc4ba1",
+        "name": "",
+        "func": "flow.set(\"wechat_token\", msg.payload.access_token)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 151.24999618530273,
+        "wires": [
+            [
+                "b948ec2ed46c7eac"
+            ]
+        ]
+    },
+    {
+        "id": "77aabbfcd8943a43",
+        "type": "http request",
+        "z": "e68425b642cc4ba1",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 722.5000038146973,
+        "y": 261.25001335144043,
+        "wires": [
+            [
+                "6cc72dc286b2d717"
+            ]
+        ]
+    },
+    {
+        "id": "ba2fc013142608a9",
+        "type": "function",
+        "z": "e68425b642cc4ba1",
+        "name": "",
+        "func": "msg.url = `https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=${flow.get(\"wechat_token\")}`;\n\ndata = {\n    touser: msg.payload.PersonId, \n    msgtype: 'text', \n    agentid: 1000008, \n    text: {\n        content: msg.payload.Code\n    }\n}\n\nmsg.payload = JSON.stringify(data);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 505,
+        "y": 266.25001335144043,
+        "wires": [
+            [
+                "77aabbfcd8943a43"
+            ]
+        ]
+    },
+    {
+        "id": "1b7d5e2149b09dc7",
+        "type": "http in",
+        "z": "e68425b642cc4ba1",
+        "name": "",
+        "url": "/api/auth/message",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 246.25,
+        "y": 265.0000286102295,
+        "wires": [
+            [
+                "ba2fc013142608a9"
+            ]
+        ]
+    },
+    {
+        "id": "7e80dfabbd3bd8a4",
+        "type": "comment",
+        "z": "e68425b642cc4ba1",
+        "name": "发送验证码",
+        "info": "",
+        "x": 216.875,
+        "y": 213.74999809265137,
+        "wires": []
+    },
+    {
+        "id": "6cc72dc286b2d717",
+        "type": "http response",
+        "z": "e68425b642cc4ba1",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 973.7499923706055,
+        "y": 263.7499942779541,
+        "wires": []
+    },
+    {
+        "id": "b948ec2ed46c7eac",
+        "type": "debug",
+        "z": "e68425b642cc4ba1",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 852.25,
+        "y": 101.5,
+        "wires": []
+    },
+    {
+        "id": "10195fa6a029b5df",
+        "type": "bcrypt",
+        "z": "10d20120ae3b14b0",
+        "name": "",
+        "action": "encrypt",
+        "field": "payload.Password",
+        "hash": "payload.Password",
+        "rounds": 10,
+        "x": 775.5000076293945,
+        "y": 285.00000190734863,
+        "wires": [
+            [
+                "96bb5677cfcb6606"
+            ]
+        ]
+    },
+    {
+        "id": "d9ef3d373ad080cb",
+        "type": "http response",
+        "z": "10d20120ae3b14b0",
+        "name": "",
+        "statusCode": "400",
+        "headers": {},
+        "x": 1345.5000076293945,
+        "y": 265.00000190734863,
+        "wires": []
+    },
+    {
+        "id": "96bb5677cfcb6606",
+        "type": "MSSQL",
+        "z": "10d20120ae3b14b0",
+        "mssqlCN": "62767a1a42ab384d",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "IF NOT EXISTS(SELECT * \r\n\tFROM [dbo].[User] \r\n\tWHERE [PersonId] = @personId)\r\nBEGIN\r\n\tSELECT  0 AS Success, @personId AS PersonId\r\nEND\r\nELSE\r\nBEGIN\r\nUPDATE [dbo].[User]\r\nSET Password = @password\r\nWHERE PersonId = @personId\r\n\r\nSELECT 1 AS Success, @personId AS PersonId, name AS Username\r\nFROM [ZKTECO].[dbo].[userinfo]\r\nwhere cast(badgenumber as int)=@personId\r\nEND",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "personId",
+                "type": "VarChar(50)",
+                "valueType": "msg",
+                "value": "payload.PersonId",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "password",
+                "type": "VarChar(1024)",
+                "valueType": "msg",
+                "value": "payload.Password",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 965.5000076293945,
+        "y": 285.00000190734863,
+        "wires": [
+            [
+                "e1729c60da32e538"
+            ]
+        ]
+    },
+    {
+        "id": "e1729c60da32e538",
+        "type": "switch",
+        "z": "10d20120ae3b14b0",
+        "name": "",
+        "property": "payload[0].Success",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1195.5000076293945,
+        "y": 285.00000190734863,
+        "wires": [
+            [
+                "d9ef3d373ad080cb"
+            ],
+            [
+                "731d03ce136ec632"
+            ]
+        ]
+    },
+    {
+        "id": "731d03ce136ec632",
+        "type": "function",
+        "z": "10d20120ae3b14b0",
+        "name": "",
+        "func": "\nmsg.payload = {PersonId: msg.payload[0].PersonId, Username:msg.payload[0].Username, Roles: [\"user\"]};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1345.5000076293945,
+        "y": 325.00000190734863,
+        "wires": [
+            [
+                "3f83479203b6e72e"
+            ]
+        ]
+    },
+    {
+        "id": "3f83479203b6e72e",
+        "type": "JsonWebToken",
+        "z": "10d20120ae3b14b0",
+        "name": "Token",
+        "tokenconfig": "f6af0e9f75849807",
+        "x": 1495.5000076293945,
+        "y": 325.00000190734863,
+        "wires": [
+            [
+                "6840379f4a269fb8"
+            ]
+        ]
+    },
+    {
+        "id": "4dc47f4e6831e70f",
+        "type": "http response",
+        "z": "10d20120ae3b14b0",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1845.5000076293945,
+        "y": 325.00000190734863,
+        "wires": []
+    },
+    {
+        "id": "6840379f4a269fb8",
+        "type": "function",
+        "z": "10d20120ae3b14b0",
+        "name": "",
+        "func": "msg.payload = {Token: msg.token};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1665.5000076293945,
+        "y": 325.00000190734863,
+        "wires": [
+            [
+                "4dc47f4e6831e70f"
+            ]
+        ]
+    },
+    {
+        "id": "3bfc9924bbbb85c0",
+        "type": "http in",
+        "z": "10d20120ae3b14b0",
+        "name": "",
+        "url": "/api/auth/reset-password",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 151.00000190734863,
+        "wires": [
+            [
+                "363803fd976a3aef"
+            ]
+        ]
+    },
+    {
+        "id": "f1067e3e2daba489",
+        "type": "debug",
+        "z": "10d20120ae3b14b0",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 554.3750076293945,
+        "y": 357.5000057220459,
+        "wires": []
+    },
+    {
+        "id": "363803fd976a3aef",
+        "type": "function",
+        "z": "10d20120ae3b14b0",
+        "name": "",
+        "func": "if (msg.req.headers['x-token-key'] !== '92CD5F7FCA49C') {\n    msg.error = 'not allowed to reset password'\n} else {\n    msg.error = null\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 404.37500762939453,
+        "y": 233.7500057220459,
+        "wires": [
+            [
+                "f65633843b09ae9c",
+                "f1067e3e2daba489"
+            ]
+        ]
+    },
+    {
+        "id": "f65633843b09ae9c",
+        "type": "switch",
+        "z": "10d20120ae3b14b0",
+        "name": "",
+        "property": "error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "null"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 579.375,
+        "y": 243.75,
+        "wires": [
+            [
+                "56815e2f7ab0657e"
+            ],
+            [
+                "10195fa6a029b5df"
+            ]
+        ]
+    },
+    {
+        "id": "56815e2f7ab0657e",
+        "type": "http response",
+        "z": "10d20120ae3b14b0",
+        "name": "",
+        "statusCode": "401",
+        "headers": {},
+        "x": 755,
+        "y": 208.75,
+        "wires": []
+    },
+    {
+        "id": "4d5da8d899d9f60f",
+        "type": "http response",
+        "z": "966e1daa290f7a12",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 590,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "50ecdcc067e855fe",
+        "type": "MSSQL",
+        "z": "966e1daa290f7a12",
+        "mssqlCN": "f8675ab2986b3127",
+        "name": "all users",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "SELECT \r\nu.Username as Name\r\n, dbo.GROUP_CONCAT(ur.RoleName) as Roles\r\nFROM [dbo].[User] u \r\nLEFT JOIN [dbo].[User_Role] ur ON u.Username = ur.Username\r\ngroup by u.Username",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "none",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [],
+        "x": 400,
+        "y": 80,
+        "wires": [
+            [
+                "4d5da8d899d9f60f"
+            ]
+        ]
+    },
+    {
+        "id": "511e72abc0bb2791",
+        "type": "http in",
+        "z": "966e1daa290f7a12",
+        "name": "",
+        "url": "/api/auth/all-users",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [
+                "50ecdcc067e855fe"
+            ]
+        ]
+    },
+    {
+        "id": "f0c4f78efcd9bf13",
+        "type": "http in",
+        "z": "0ecdf5ef2719c3c7",
+        "name": "",
+        "url": "/api/auth/me",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 178,
+        "y": 225.75,
+        "wires": [
+            [
+                "0557703f0b0839ae"
+            ]
+        ]
+    },
+    {
+        "id": "cccd7287e921d7de",
+        "type": "JsonWebToken",
+        "z": "0ecdf5ef2719c3c7",
+        "name": "jwt",
+        "tokenconfig": "f6af0e9f75849807",
+        "x": 598,
+        "y": 225.75,
+        "wires": [
+            [
+                "e3124fd5a5ea629b"
+            ]
+        ]
+    },
+    {
+        "id": "8ed97d1a3b105f73",
+        "type": "http response",
+        "z": "0ecdf5ef2719c3c7",
+        "name": "success",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1179,
+        "y": 266.75,
+        "wires": []
+    },
+    {
+        "id": "0557703f0b0839ae",
+        "type": "function",
+        "z": "0ecdf5ef2719c3c7",
+        "name": "",
+        "func": "msg.token = msg.payload.Token;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 408,
+        "y": 225.75,
+        "wires": [
+            [
+                "cccd7287e921d7de"
+            ]
+        ]
+    },
+    {
+        "id": "c6353b947bae9a52",
+        "type": "function",
+        "z": "0ecdf5ef2719c3c7",
+        "name": "",
+        "func": "msg.payload = msg.token;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 959,
+        "y": 267.75,
+        "wires": [
+            [
+                "8ed97d1a3b105f73"
+            ]
+        ]
+    },
+    {
+        "id": "e3124fd5a5ea629b",
+        "type": "switch",
+        "z": "0ecdf5ef2719c3c7",
+        "name": "",
+        "property": "error",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "null"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 761.5833282470703,
+        "y": 226.9999942779541,
+        "wires": [
+            [
+                "d76f497bdf7d062e"
+            ],
+            [
+                "c6353b947bae9a52"
+            ]
+        ]
+    },
+    {
+        "id": "d76f497bdf7d062e",
+        "type": "http response",
+        "z": "0ecdf5ef2719c3c7",
+        "name": "invalid token",
+        "statusCode": "400",
+        "headers": {},
+        "x": 955.5833282470703,
+        "y": 164.9999942779541,
+        "wires": []
+    },
+    {
+        "id": "e83cf706e1de37dd",
+        "type": "http response",
+        "z": "b2fe1c959df19aa8",
+        "name": "username not exist",
+        "statusCode": "400",
+        "headers": {},
+        "x": 1077.000015258789,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "b0d8dcf1d1d1356c",
+        "type": "MSSQL",
+        "z": "b2fe1c959df19aa8",
+        "mssqlCN": "4dd3717b1bcbcbb0",
+        "name": "Verify personId",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "SELECT TOP 1 u.PersonId\n, @password AS PasswordText\n, Password AS PasswordHash\nFROM [dbo].[User] u \nWHERE u.PersonId = @personId\n",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "personId",
+                "type": "VarChar(50)",
+                "valueType": "msg",
+                "value": "payload.PersonId",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "password",
+                "type": "VarChar(1024)",
+                "valueType": "msg",
+                "value": "payload.Password",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 447.00001525878906,
+        "y": 120,
+        "wires": [
+            [
+                "eb0bbc45fd8146a9"
+            ]
+        ]
+    },
+    {
+        "id": "eb0bbc45fd8146a9",
+        "type": "switch",
+        "z": "b2fe1c959df19aa8",
+        "name": "",
+        "property": "payload.length",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 672.3334541320801,
+        "y": 119.99999809265137,
+        "wires": [
+            [
+                "934f0ec3031cb11d"
+            ],
+            [
+                "0b2087a4647ce708"
+            ]
+        ]
+    },
+    {
+        "id": "60aa4a7a5e566abc",
+        "type": "MSSQL",
+        "z": "b2fe1c959df19aa8",
+        "mssqlCN": "4dd3717b1bcbcbb0",
+        "name": "Get Roles",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "\nDECLARE @roles VARCHAR(MAX)\nDECLARE @username NVARCHAR(MAX)\n\nSELECT @roles = COALESCE(@roles + '|', '') + RoleName\nFROM [dbo].[User_Role]\nWHERE PersonId = @personId\n\nSELECT @username = name \nFROM [ZKTECO].[dbo].[userinfo]\nWHERE cast(badgenumber as int)=@personId\n\nSELECT @personId AS PersonId, @username AS Username,  @roles AS Roles",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "personId",
+                "type": "VarChar(50)",
+                "valueType": "msg",
+                "value": "payload.PersonId",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 1368.250389099121,
+        "y": 199.50009536743164,
+        "wires": [
+            [
+                "392f2dc856dfc24b"
+            ]
+        ]
+    },
+    {
+        "id": "15e800ed9705667c",
+        "type": "http response",
+        "z": "b2fe1c959df19aa8",
+        "name": "Success",
+        "statusCode": "200",
+        "headers": {},
+        "x": 2157.000030517578,
+        "y": 201.25000190734863,
+        "wires": []
+    },
+    {
+        "id": "76bac831f44e9ef3",
+        "type": "bcrypt",
+        "z": "b2fe1c959df19aa8",
+        "name": "",
+        "action": "verify",
+        "field": "payload.PasswordText",
+        "hash": "payload.PasswordHash",
+        "rounds": 10,
+        "x": 984.0000267028809,
+        "y": 145,
+        "wires": [
+            [
+                "f11eaf6a7316cb09"
+            ]
+        ]
+    },
+    {
+        "id": "0b2087a4647ce708",
+        "type": "function",
+        "z": "b2fe1c959df19aa8",
+        "name": "",
+        "func": "msg.payload = msg.payload[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 832.6666870117188,
+        "y": 145.33333492279053,
+        "wires": [
+            [
+                "76bac831f44e9ef3"
+            ]
+        ]
+    },
+    {
+        "id": "f11eaf6a7316cb09",
+        "type": "switch",
+        "z": "b2fe1c959df19aa8",
+        "name": "Verify Password",
+        "property": "match",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1161.6667022705078,
+        "y": 145.33334350585938,
+        "wires": [
+            [
+                "7b7fd16980527adb"
+            ],
+            [
+                "60aa4a7a5e566abc"
+            ]
+        ]
+    },
+    {
+        "id": "be355803d5b6a3bc",
+        "type": "http response",
+        "z": "b2fe1c959df19aa8",
+        "name": "password not valid",
+        "statusCode": "401",
+        "headers": {},
+        "x": 1599.5000228881836,
+        "y": 96.25000190734863,
+        "wires": []
+    },
+    {
+        "id": "5cda60e64a40edbd",
+        "type": "JsonWebToken",
+        "z": "b2fe1c959df19aa8",
+        "name": "Token",
+        "tokenconfig": "f6af0e9f75849807",
+        "x": 1775.0000267028809,
+        "y": 203.50000190734863,
+        "wires": [
+            [
+                "952d57db30a08a61"
+            ]
+        ]
+    },
+    {
+        "id": "392f2dc856dfc24b",
+        "type": "function",
+        "z": "b2fe1c959df19aa8",
+        "name": "Format payload",
+        "func": "let Roles = msg.payload[0].Roles;\nlet PersonId = msg.payload[0].PersonId;\nlet Username = msg.payload[0].Username;\n\nmsg.payload = {PersonId, Username, Roles: Roles.split('|')};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1579.499900817871,
+        "y": 202.25000190734863,
+        "wires": [
+            [
+                "5cda60e64a40edbd"
+            ]
+        ]
+    },
+    {
+        "id": "1a4eca5cd71fd6d3",
+        "type": "http in",
+        "z": "b2fe1c959df19aa8",
+        "name": "",
+        "url": "/api/auth/sign-in",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 122.9999942779541,
+        "wires": [
+            [
+                "b0d8dcf1d1d1356c"
+            ]
+        ]
+    },
+    {
+        "id": "934f0ec3031cb11d",
+        "type": "function",
+        "z": "b2fe1c959df19aa8",
+        "name": "",
+        "func": "msg.payload = {Token: null};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 857.0000152587891,
+        "y": 80,
+        "wires": [
+            [
+                "e83cf706e1de37dd"
+            ]
+        ]
+    },
+    {
+        "id": "7b7fd16980527adb",
+        "type": "function",
+        "z": "b2fe1c959df19aa8",
+        "name": "",
+        "func": "msg.payload = {Token:null};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1357.5000228881836,
+        "y": 96.7499942779541,
+        "wires": [
+            [
+                "be355803d5b6a3bc"
+            ]
+        ]
+    },
+    {
+        "id": "952d57db30a08a61",
+        "type": "function",
+        "z": "b2fe1c959df19aa8",
+        "name": "",
+        "func": "msg.payload = {Token:msg.token};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1957.0000267028809,
+        "y": 202.50000190734863,
+        "wires": [
+            [
+                "15e800ed9705667c"
+            ]
+        ]
+    },
+    {
+        "id": "0e478b2a5a68b4ee",
+        "type": "http in",
+        "z": "b2fe1c959df19aa8",
+        "name": "",
+        "url": "/api/auth/sign-in-card",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 186,
+        "y": 380,
+        "wires": [
+            [
+                "9cdd95c1895ae123"
+            ]
+        ]
+    },
+    {
+        "id": "9cdd95c1895ae123",
+        "type": "MSSQL",
+        "z": "b2fe1c959df19aa8",
+        "mssqlCN": "4dd3717b1bcbcbb0",
+        "name": "Verify cardId",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "SELECT TOP 1 u.PersonId\nFROM [dbo].[User] u \nWHERE u.CardId= @cardId\n",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "cardId",
+                "type": "VarChar(50)",
+                "valueType": "msg",
+                "value": "payload.CardId",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 463,
+        "y": 378,
+        "wires": [
+            [
+                "51f7d36fe7becb14"
+            ]
+        ]
+    },
+    {
+        "id": "51f7d36fe7becb14",
+        "type": "switch",
+        "z": "b2fe1c959df19aa8",
+        "name": "",
+        "property": "payload.length",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 652,
+        "y": 386,
+        "wires": [
+            [
+                "658ec24d9ae44d1b"
+            ],
+            [
+                "f7c9b8921cbeeaeb"
+            ]
+        ]
+    },
+    {
+        "id": "5e0a962ec1de1d4d",
+        "type": "http response",
+        "z": "b2fe1c959df19aa8",
+        "name": "user not exist",
+        "statusCode": "400",
+        "headers": {},
+        "x": 1056,
+        "y": 306,
+        "wires": []
+    },
+    {
+        "id": "658ec24d9ae44d1b",
+        "type": "function",
+        "z": "b2fe1c959df19aa8",
+        "name": "",
+        "func": "msg.payload = {Token: null};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 856,
+        "y": 306,
+        "wires": [
+            [
+                "5e0a962ec1de1d4d"
+            ]
+        ]
+    },
+    {
+        "id": "f7c9b8921cbeeaeb",
+        "type": "function",
+        "z": "b2fe1c959df19aa8",
+        "name": "",
+        "func": "msg.payload = msg.payload[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 854,
+        "y": 405,
+        "wires": [
+            [
+                "5905152f8e03c09b"
+            ]
+        ]
+    },
+    {
+        "id": "5905152f8e03c09b",
+        "type": "MSSQL",
+        "z": "b2fe1c959df19aa8",
+        "mssqlCN": "4dd3717b1bcbcbb0",
+        "name": "Get Roles",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "\nDECLARE @roles VARCHAR(MAX)\nDECLARE @username NVARCHAR(MAX)\n\nSELECT @roles = COALESCE(@roles + '|', '') + RoleName\nFROM [dbo].[User_Role]\nWHERE PersonId = @personId\n\nSELECT @username = name \nFROM [ZKTECO].[dbo].[userinfo]\nWHERE cast(badgenumber as int)=@personId\n\nSELECT @personId AS PersonId, @username AS Username,  @roles AS Roles",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "personId",
+                "type": "VarChar(50)",
+                "valueType": "msg",
+                "value": "payload.PersonId",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 1042,
+        "y": 407,
+        "wires": [
+            [
+                "cd449a4432928263"
+            ]
+        ]
+    },
+    {
+        "id": "24363b9a64538d42",
+        "type": "http response",
+        "z": "b2fe1c959df19aa8",
+        "name": "Success",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1830.749641418457,
+        "y": 408.749906539917,
+        "wires": []
+    },
+    {
+        "id": "1a5c7d9948f4d0a1",
+        "type": "JsonWebToken",
+        "z": "b2fe1c959df19aa8",
+        "name": "Token",
+        "tokenconfig": "f6af0e9f75849807",
+        "x": 1448.7496376037598,
+        "y": 410.999906539917,
+        "wires": [
+            [
+                "af24ec68e9cb8837"
+            ]
+        ]
+    },
+    {
+        "id": "cd449a4432928263",
+        "type": "function",
+        "z": "b2fe1c959df19aa8",
+        "name": "Format payload",
+        "func": "let Roles = msg.payload[0].Roles;\nlet PersonId = msg.payload[0].PersonId;\nlet Username = msg.payload[0].Username;\n\nmsg.payload = {PersonId, Username, Roles: Roles.split('|')};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1253.24951171875,
+        "y": 409.749906539917,
+        "wires": [
+            [
+                "1a5c7d9948f4d0a1"
+            ]
+        ]
+    },
+    {
+        "id": "af24ec68e9cb8837",
+        "type": "function",
+        "z": "b2fe1c959df19aa8",
+        "name": "",
+        "func": "msg.payload = {Token:msg.token};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1630.7496376037598,
+        "y": 409.999906539917,
+        "wires": [
+            [
+                "24363b9a64538d42"
+            ]
+        ]
+    },
+    {
+        "id": "a8b8db7e08a3901f",
+        "type": "http in",
+        "z": "17da1bdca831d5a1",
+        "name": "",
+        "url": "/api/auth/sign-up",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 218.75000762939453,
+        "y": 420.0000057220459,
+        "wires": [
+            [
+                "b03473c98c081ac9"
+            ]
+        ]
+    },
+    {
+        "id": "b03473c98c081ac9",
+        "type": "bcrypt",
+        "z": "17da1bdca831d5a1",
+        "name": "",
+        "action": "encrypt",
+        "field": "payload.Password",
+        "hash": "payload.Password",
+        "rounds": 10,
+        "x": 438.75000762939453,
+        "y": 420.0000057220459,
+        "wires": [
+            [
+                "a169f2e86ce418c8"
+            ]
+        ]
+    },
+    {
+        "id": "c39da41fc0b47259",
+        "type": "http response",
+        "z": "17da1bdca831d5a1",
+        "name": "",
+        "statusCode": "400",
+        "headers": {},
+        "x": 1008.7500076293945,
+        "y": 400.0000057220459,
+        "wires": []
+    },
+    {
+        "id": "a169f2e86ce418c8",
+        "type": "MSSQL",
+        "z": "17da1bdca831d5a1",
+        "mssqlCN": "59ec2d9edacddda3",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "IF EXISTS(SELECT * \r\n\tFROM [dbo].[User] \r\n\tWHERE [PersonId] = @personId)\r\nBEGIN\r\n\tSELECT  0 AS Success, @personId AS PersonId\r\nEND\r\nELSE\r\nBEGIN\r\nINSERT INTO [dbo].[User]  ([TimeStamp],[PersonId], [Password])\r\nVALUES (GETDATE(), @personId, @password)\r\n\r\nINSERT INTO [dbo].[User_Role]  ([PersonId], [RoleName])\r\nVALUES (@personId, 'user')\r\n\r\n\r\nSELECT 1 AS Success, @personId AS PersonId, name AS Username\r\nFROM [ZKTECO].[dbo].[userinfo]\r\nwhere cast(badgenumber as int)=@personId\r\nEND",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "personId",
+                "type": "VarChar(50)",
+                "valueType": "msg",
+                "value": "payload.PersonId",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "password",
+                "type": "VarChar(1024)",
+                "valueType": "msg",
+                "value": "payload.Password",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 628.7500076293945,
+        "y": 420.0000057220459,
+        "wires": [
+            [
+                "802529bcc896985b"
+            ]
+        ]
+    },
+    {
+        "id": "802529bcc896985b",
+        "type": "switch",
+        "z": "17da1bdca831d5a1",
+        "name": "",
+        "property": "payload[0].Success",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 858.7500076293945,
+        "y": 420.0000057220459,
+        "wires": [
+            [
+                "c39da41fc0b47259"
+            ],
+            [
+                "aa11b0b00d6fdf90"
+            ]
+        ]
+    },
+    {
+        "id": "aa11b0b00d6fdf90",
+        "type": "function",
+        "z": "17da1bdca831d5a1",
+        "name": "",
+        "func": "\nmsg.payload = {PersonId: msg.payload[0].PersonId, Username:msg.payload[0].Username, Roles: [\"user\"]};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1008.7500076293945,
+        "y": 460.0000057220459,
+        "wires": [
+            [
+                "fdd3ee6f9ab48dad"
+            ]
+        ]
+    },
+    {
+        "id": "fdd3ee6f9ab48dad",
+        "type": "JsonWebToken",
+        "z": "17da1bdca831d5a1",
+        "name": "Token",
+        "tokenconfig": "f6af0e9f75849807",
+        "x": 1158.7500076293945,
+        "y": 460.0000057220459,
+        "wires": [
+            [
+                "d3e14be1cbcc2422"
+            ]
+        ]
+    },
+    {
+        "id": "4463706885141567",
+        "type": "http response",
+        "z": "17da1bdca831d5a1",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1508.7500076293945,
+        "y": 460.0000057220459,
+        "wires": []
+    },
+    {
+        "id": "d3e14be1cbcc2422",
+        "type": "function",
+        "z": "17da1bdca831d5a1",
+        "name": "",
+        "func": "msg.payload = {Token: msg.token};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1328.7500076293945,
+        "y": 460.0000057220459,
+        "wires": [
+            [
+                "4463706885141567"
+            ]
+        ]
+    },
+    {
+        "id": "cc455fcb1beb3ef7",
+        "type": "comment",
+        "z": "fb8670bbc5e8dc56",
+        "name": "/api/auth/sign-in",
+        "info": "",
+        "x": 182.0833282470703,
+        "y": 37.91667175292969,
+        "wires": []
+    },
+    {
+        "id": "e76b3cefc4557ec8",
+        "type": "comment",
+        "z": "fb8670bbc5e8dc56",
+        "name": "/api/auth/all-users",
+        "info": "",
+        "x": 924.75,
+        "y": 39.5,
+        "wires": []
+    },
+    {
+        "id": "90ae2e2cd38784fa",
+        "type": "comment",
+        "z": "fb8670bbc5e8dc56",
+        "name": "/api/auth/sign-up",
+        "info": "",
+        "x": 436.04167556762695,
+        "y": 39.583316802978516,
+        "wires": []
+    },
+    {
+        "id": "f0c87cc410788bfc",
+        "type": "subflow:17da1bdca831d5a1",
+        "z": "fb8670bbc5e8dc56",
+        "name": "sign up",
+        "x": 407.916690826416,
+        "y": 89.58331871032715,
+        "wires": []
+    },
+    {
+        "id": "f809ab23e603c7bc",
+        "type": "subflow:b2fe1c959df19aa8",
+        "z": "fb8670bbc5e8dc56",
+        "name": "sign in",
+        "x": 161.50004959106445,
+        "y": 95.58337593078613,
+        "wires": []
+    },
+    {
+        "id": "d84be7679b431ba7",
+        "type": "subflow:0ecdf5ef2719c3c7",
+        "z": "fb8670bbc5e8dc56",
+        "name": "current user info",
+        "x": 666.4166870117188,
+        "y": 91.875,
+        "wires": []
+    },
+    {
+        "id": "8d5b60fb102d8588",
+        "type": "comment",
+        "z": "fb8670bbc5e8dc56",
+        "name": "/api/auth/me",
+        "info": "",
+        "x": 657.5,
+        "y": 38,
+        "wires": []
+    },
+    {
+        "id": "905a4b5d4808ce6d",
+        "type": "subflow:966e1daa290f7a12",
+        "z": "fb8670bbc5e8dc56",
+        "name": "all users",
+        "x": 911.75,
+        "y": 91.5,
+        "wires": []
+    },
+    {
+        "id": "4853c119eee0057e",
+        "type": "comment",
+        "z": "fb8670bbc5e8dc56",
+        "name": "/api/auth/reset-password",
+        "info": "",
+        "x": 209.5,
+        "y": 217,
+        "wires": []
+    },
+    {
+        "id": "e1761d1a785425ee",
+        "type": "subflow:10d20120ae3b14b0",
+        "z": "fb8670bbc5e8dc56",
+        "name": "reset password",
+        "x": 182.0000114440918,
+        "y": 292.0000057220459,
+        "wires": []
+    },
+    {
+        "id": "a3765a23fce2b3f6",
+        "type": "comment",
+        "z": "fb8670bbc5e8dc56",
+        "name": "/api/auth/message",
+        "info": "",
+        "x": 519.5,
+        "y": 233,
+        "wires": []
+    },
+    {
+        "id": "cc9fd15ac96d658b",
+        "type": "subflow:e68425b642cc4ba1",
+        "z": "fb8670bbc5e8dc56",
+        "name": "wechat message",
+        "x": 509.875,
+        "y": 297.75,
+        "wires": []
+    },
+    {
+        "id": "b3a89f154907d73e",
+        "type": "comment",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "分层审核",
+        "info": "",
+        "x": 230,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6eb90f549f37c0ba",
+        "type": "http in",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "url": "/api/lpa/data",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "9439312909d32999"
+            ]
+        ]
+    },
+    {
+        "id": "9439312909d32999",
+        "type": "MSSQL",
+        "z": "72e4c9a3efc7b7f5",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "SELECT * FROM [dbo].[CHQ_LPA_Data] \r\nORDER BY Id desc",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "none",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [],
+        "x": 420,
+        "y": 180,
+        "wires": [
+            [
+                "3a5d4cda979640e7"
+            ]
+        ]
+    },
+    {
+        "id": "3a5d4cda979640e7",
+        "type": "http response",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 640,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "db5294a066292985",
+        "type": "comment",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "查询历史数据",
+        "info": "",
+        "x": 220,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "bf8ceeb094923008",
+        "type": "http in",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "url": "/api/lpa/issues/post",
+        "method": "post",
+        "upload": true,
+        "swaggerDoc": "",
+        "x": 250,
+        "y": 360,
+        "wires": [
+            [
+                "9c8c38df71e42c98"
+            ]
+        ]
+    },
+    {
+        "id": "ae6dfa02ef66160c",
+        "type": "http response",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1030,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "d997cfca7bc44ce5",
+        "type": "file",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 692,
+        "y": 363,
+        "wires": [
+            [
+                "205ea7fecfb7a26d"
+            ]
+        ]
+    },
+    {
+        "id": "9c8c38df71e42c98",
+        "type": "function",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "func": "let file = msg.req.files[0];\nlet ext = file.mimetype.split(\"/\")[1];\nmsg.filename = `/data/uibuilder/common/images/lpa/issues/${new Date().getTime()}.${ext}`;\n// msg.encoding = file.encoding;\nmsg.payload = file.buffer;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 360,
+        "wires": [
+            [
+                "d997cfca7bc44ce5"
+            ]
+        ]
+    },
+    {
+        "id": "205ea7fecfb7a26d",
+        "type": "function",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "func": "msg.payload = msg.filename;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 861,
+        "y": 360,
+        "wires": [
+            [
+                "ae6dfa02ef66160c"
+            ]
+        ]
+    },
+    {
+        "id": "ad80c2f388d64ffe",
+        "type": "http in",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "url": "/api/lpa/issues/delete",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 480,
+        "wires": [
+            [
+                "0658bfd3da609913"
+            ]
+        ]
+    },
+    {
+        "id": "5446ea8db9524e7c",
+        "type": "http response",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 890,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "0658bfd3da609913",
+        "type": "function",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "func": "msg.filename = msg.payload;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 500,
+        "wires": [
+            [
+                "1f49604fc1e6fc19"
+            ]
+        ]
+    },
+    {
+        "id": "1f49604fc1e6fc19",
+        "type": "file",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "filename": "",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "delete",
+        "encoding": "none",
+        "x": 690,
+        "y": 500,
+        "wires": [
+            [
+                "5446ea8db9524e7c"
+            ]
+        ]
+    },
+    {
+        "id": "582a167b8636c685",
+        "type": "MSSQL",
+        "z": "72e4c9a3efc7b7f5",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "INSERT INTO [dbo].[CHQ_LPA_Data] \r\nVALUES (\r\n'{{{payload.creationDate}}}', \r\nN'{{{payload.level}}}',\r\nN'{{{payload.auditor}}}',\r\nN'{{{payload.machine}}}',\r\nN'{{{payload.shift}}}',\r\nN'{{{payload.category}}}',\r\nN'{{{payload.description}}}',\r\nnull,\r\nN'{{{payload.owner}}}',\r\nnull,\r\nnull,\r\nN'{{{payload.issueImages}}}',\r\nnull\r\n)\r\n\r\nSELECT * FROM [dbo].[CHQ_LPA_Data] \r\nORDER BY Id desc",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "none",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [],
+        "x": 520,
+        "y": 840,
+        "wires": [
+            [
+                "f335d1e68f00dee6"
+            ]
+        ]
+    },
+    {
+        "id": "6a75aabc7e5f618a",
+        "type": "comment",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "上传问题图片",
+        "info": "",
+        "x": 260,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "8cc24f436932e023",
+        "type": "comment",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "删除问题图片",
+        "info": "",
+        "x": 250,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "d4639583102919d3",
+        "type": "http in",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "url": "/api/lpa/new",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 280,
+        "y": 840,
+        "wires": [
+            [
+                "582a167b8636c685"
+            ]
+        ]
+    },
+    {
+        "id": "f335d1e68f00dee6",
+        "type": "http response",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "50eb8b5d2e9bf18c",
+        "type": "comment",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "添加一条记录",
+        "info": "",
+        "x": 270,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "c69bb4a8142b0a0d",
+        "type": "http in",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "url": "/api/lpa/data/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 240,
+        "wires": [
+            [
+                "7bae62fa6ddb7435"
+            ]
+        ]
+    },
+    {
+        "id": "82487ef1defea985",
+        "type": "MSSQL",
+        "z": "72e4c9a3efc7b7f5",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "\r\nSELECT TOP 1  [Id]\r\n      ,[AuditDate]\r\n      ,[GroupLevel]\r\n      ,[Auditor]\r\n      ,[Machine]\r\n      ,[Shift]\r\n      ,[Category]\r\n      ,[Description]\r\n      ,[ActionPlan]\r\n      ,[Responsible]\r\n      ,[FinishDate]\r\n      ,[Effect]\r\n      ,[IssueImages]\r\n      ,[EffectImages]\r\nFROM [dbo].[CHQ_LPA_Data]\r\nWHERE Id = {{{payload}}}\r\n",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "none",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [],
+        "x": 620,
+        "y": 260,
+        "wires": [
+            [
+                "f96b10f33cecc19b"
+            ]
+        ]
+    },
+    {
+        "id": "f96b10f33cecc19b",
+        "type": "http response",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 810,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "7bae62fa6ddb7435",
+        "type": "function",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "func": "msg.payload = Number(msg.req.params.id);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "82487ef1defea985"
+            ]
+        ]
+    },
+    {
+        "id": "94b45ecebc8aacbe",
+        "type": "http in",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "url": "/api/lpa/effect/post",
+        "method": "post",
+        "upload": true,
+        "swaggerDoc": "",
+        "x": 300,
+        "y": 600,
+        "wires": [
+            [
+                "5c981c31f984094c"
+            ]
+        ]
+    },
+    {
+        "id": "5874e1efb0d55363",
+        "type": "http response",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1070,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "20fa4cc5a9e57ef4",
+        "type": "file",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 732,
+        "y": 603,
+        "wires": [
+            [
+                "8bc1ec024d198050"
+            ]
+        ]
+    },
+    {
+        "id": "5c981c31f984094c",
+        "type": "function",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "func": "let file = msg.req.files[0];\nlet ext = file.mimetype.split(\"/\")[1];\nmsg.filename = `/data/uibuilder/common/images/lpa/effect/${new Date().getTime()}.${ext}`;\n// msg.encoding = file.encoding;\nmsg.payload = file.buffer;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 600,
+        "wires": [
+            [
+                "20fa4cc5a9e57ef4"
+            ]
+        ]
+    },
+    {
+        "id": "8bc1ec024d198050",
+        "type": "function",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "func": "msg.payload = msg.filename;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 901,
+        "y": 600,
+        "wires": [
+            [
+                "5874e1efb0d55363"
+            ]
+        ]
+    },
+    {
+        "id": "0ab4fb43c4fa0cfd",
+        "type": "http in",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "url": "/api/lpa/effect/delete",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 320,
+        "y": 680,
+        "wires": [
+            [
+                "20a963106aca6128"
+            ]
+        ]
+    },
+    {
+        "id": "41fed76e5d484152",
+        "type": "comment",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "上传效果图片",
+        "info": "",
+        "x": 300,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "d19fc5bce988e642",
+        "type": "comment",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "删除效果图片",
+        "info": "",
+        "x": 310,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "2d5ee74d9c7da26d",
+        "type": "http response",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 970,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "20a963106aca6128",
+        "type": "function",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "func": "msg.filename = msg.payload;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 700,
+        "wires": [
+            [
+                "defb1c0e4b540d63"
+            ]
+        ]
+    },
+    {
+        "id": "defb1c0e4b540d63",
+        "type": "file",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "filename": "",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "delete",
+        "encoding": "none",
+        "x": 750,
+        "y": 700,
+        "wires": [
+            [
+                "2d5ee74d9c7da26d"
+            ]
+        ]
+    },
+    {
+        "id": "be998ff8f6e05fe5",
+        "type": "comment",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "删除一条记录",
+        "info": "",
+        "x": 270,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "3cb0ac7c8218ba9f",
+        "type": "http in",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "url": "/api/lpa/delete/:id",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 310,
+        "y": 1060,
+        "wires": [
+            [
+                "f2bbbaca955c61f5"
+            ]
+        ]
+    },
+    {
+        "id": "5007efb31beb6bbe",
+        "type": "http response",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 990,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "ad119363b8085d38",
+        "type": "MSSQL",
+        "z": "72e4c9a3efc7b7f5",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "\r\n\r\nDELETE FROM [dbo].[CHQ_LPA_Data] \r\nWHERE Id = @id",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "id",
+                "type": "int",
+                "valueType": "msg",
+                "value": "payload",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 780,
+        "y": 1060,
+        "wires": [
+            [
+                "5007efb31beb6bbe"
+            ]
+        ]
+    },
+    {
+        "id": "82fa20cd7db262f7",
+        "type": "comment",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "更新一条记录",
+        "info": "",
+        "x": 290,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "bf2362aee95d8e1b",
+        "type": "http in",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "url": "/api/lpa/update",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 300,
+        "y": 960,
+        "wires": [
+            [
+                "a8274e904aed01f0"
+            ]
+        ]
+    },
+    {
+        "id": "bbc2fce07b0ddddc",
+        "type": "http response",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 790,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "a8274e904aed01f0",
+        "type": "MSSQL",
+        "z": "72e4c9a3efc7b7f5",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "\r\n\r\nUPDATE [dbo].[CHQ_LPA_Data] \r\nSET ActionPlan = @action, Effect = @effect, EffectImages = @effectimages, FinishDate = @finishdate\r\nWHERE Id = {{payload.id}}\r\n\r\nSELECT * FROM [dbo].[CHQ_LPA_Data] \r\nWHERE Id = {{{payload.id}}}",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "action",
+                "type": "NVarChar(1000)",
+                "valueType": "msg",
+                "value": "payload.action",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "effect",
+                "type": "NVarChar(1000)",
+                "valueType": "msg",
+                "value": "payload.effect",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "effectimages",
+                "type": "NVarChar(1000)",
+                "valueType": "msg",
+                "value": "payload.effectImages",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "finishdate",
+                "type": "date",
+                "valueType": "msg",
+                "value": "payload.finishDate",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 520,
+        "y": 960,
+        "wires": [
+            [
+                "bbc2fce07b0ddddc"
+            ]
+        ]
+    },
+    {
+        "id": "f2bbbaca955c61f5",
+        "type": "function",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "func": "msg.payload = Number(msg.req.params.id);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 1060,
+        "wires": [
+            [
+                "ad119363b8085d38"
+            ]
+        ]
+    },
+    {
+        "id": "850f868255e7c422",
+        "type": "http in",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "url": "/api/lpa/target/data",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 330,
+        "y": 1180,
+        "wires": [
+            [
+                "e0a9ac56c5f65860"
+            ]
+        ]
+    },
+    {
+        "id": "e0a9ac56c5f65860",
+        "type": "MSSQL",
+        "z": "72e4c9a3efc7b7f5",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "SELECT * FROM [dbo].[CHQ_LPA_Target]\r\nORDER BY Id desc",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "none",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [],
+        "x": 600,
+        "y": 1180,
+        "wires": [
+            [
+                "0f04ac50d96d5baa"
+            ]
+        ]
+    },
+    {
+        "id": "0f04ac50d96d5baa",
+        "type": "http response",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 820,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "3137a6dfc18c5bc0",
+        "type": "comment",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "目标记录",
+        "info": "",
+        "x": 310,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "e091455155cfa6b0",
+        "type": "http in",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "url": "/api/lpa/target/delete/:id",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 350,
+        "y": 1340,
+        "wires": [
+            [
+                "06c0f9df80b3c570"
+            ]
+        ]
+    },
+    {
+        "id": "fa821e86bc6a2e1d",
+        "type": "http response",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1030,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "85578b2a82d34f4b",
+        "type": "MSSQL",
+        "z": "72e4c9a3efc7b7f5",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "\r\n\r\nDELETE FROM [dbo].[CHQ_LPA_Target]\r\nWHERE Id = @id",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "id",
+                "type": "int",
+                "valueType": "msg",
+                "value": "payload",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 820,
+        "y": 1340,
+        "wires": [
+            [
+                "fa821e86bc6a2e1d"
+            ]
+        ]
+    },
+    {
+        "id": "06c0f9df80b3c570",
+        "type": "function",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "func": "msg.payload = Number(msg.req.params.id);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 1340,
+        "wires": [
+            [
+                "85578b2a82d34f4b"
+            ]
+        ]
+    },
+    {
+        "id": "20dc6e7ebae35407",
+        "type": "http in",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "url": "/api/lpa/target/data/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 350,
+        "y": 1260,
+        "wires": [
+            [
+                "ba7498e614afec81"
+            ]
+        ]
+    },
+    {
+        "id": "ba00edab11dee860",
+        "type": "MSSQL",
+        "z": "72e4c9a3efc7b7f5",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "\r\nSELECT TOP 1 *\r\nFROM [dbo].[CHQ_LPA_Target]\r\nWHERE Id = @id\r\n",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "id",
+                "type": "int",
+                "valueType": "msg",
+                "value": "payload",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 760,
+        "y": 1260,
+        "wires": [
+            [
+                "4d2e24809072f893"
+            ]
+        ]
+    },
+    {
+        "id": "4d2e24809072f893",
+        "type": "http response",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 950,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "ba7498e614afec81",
+        "type": "function",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "func": "msg.payload = Number(msg.req.params.id);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1260,
+        "wires": [
+            [
+                "ba00edab11dee860"
+            ]
+        ]
+    },
+    {
+        "id": "efe817e185cd3b24",
+        "type": "http in",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "url": "/api/lpa/target/update",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 330,
+        "y": 1420,
+        "wires": [
+            [
+                "3b662969f4b5565a"
+            ]
+        ]
+    },
+    {
+        "id": "1bd725d156110e93",
+        "type": "http response",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 870,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "3b662969f4b5565a",
+        "type": "MSSQL",
+        "z": "72e4c9a3efc7b7f5",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "\r\n\r\nUPDATE [dbo].[CHQ_LPA_Target]\r\nSET StartDate = @startDate, EndDate = @endDate, Target = @target\r\nWHERE Id = @id\r\n\r\nSELECT * FROM [dbo].[CHQ_LPA_Target]\r\nWHERE Id = @id",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "id",
+                "type": "Int",
+                "valueType": "msg",
+                "value": "payload.id",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "startDate",
+                "type": "Date",
+                "valueType": "msg",
+                "value": "payload.startDate",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "endDate",
+                "type": "Date",
+                "valueType": "msg",
+                "value": "payload.endDate",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "target",
+                "type": "int",
+                "valueType": "msg",
+                "value": "payload.target",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 600,
+        "y": 1420,
+        "wires": [
+            [
+                "1bd725d156110e93"
+            ]
+        ]
+    },
+    {
+        "id": "d3653c4657ae7fe4",
+        "type": "http in",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "url": "/api/lpa/target/new",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 360,
+        "y": 1520,
+        "wires": [
+            [
+                "b7ea8b2da7e43ed3"
+            ]
+        ]
+    },
+    {
+        "id": "b7ea8b2da7e43ed3",
+        "type": "MSSQL",
+        "z": "72e4c9a3efc7b7f5",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "INSERT INTO [dbo].[CHQ_LPA_Target]\r\nVALUES (\r\n@startDate,\r\n@endDate,\r\n@auditor,\r\n@target\r\n)\r\n\r\nSELECT * FROM [dbo].[CHQ_LPA_Target]\r\nORDER BY Id desc",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "startDate",
+                "type": "Date",
+                "valueType": "msg",
+                "value": "payload.startDate",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "endDate",
+                "type": "Date",
+                "valueType": "msg",
+                "value": "payload.endDate",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "target",
+                "type": "int",
+                "valueType": "msg",
+                "value": "payload.target",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "auditor",
+                "type": "NVarChar(50)",
+                "valueType": "msg",
+                "value": "payload.auditor",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 620,
+        "y": 1520,
+        "wires": [
+            [
+                "4e23a07f993a8d5e"
+            ]
+        ]
+    },
+    {
+        "id": "4e23a07f993a8d5e",
+        "type": "http response",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 830,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "352849d585132370",
+        "type": "http in",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "url": "/api/lpa/chart/days",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 340,
+        "y": 1640,
+        "wires": [
+            [
+                "d0646f51d954f41d"
+            ]
+        ]
+    },
+    {
+        "id": "5b7b1c01a4dcc52a",
+        "type": "MSSQL",
+        "z": "72e4c9a3efc7b7f5",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "SELECT [{{{payload.category}}}], COUNT(*) AS AuditQty\r\nFROM [dbo].[CHQ_LPA_Data]\r\nWHERE AuditDate >= GETDATE() - @days\r\nGROUP BY [{{{payload.category}}}]\r\nORDER BY COUNT(*) DESC\r\n",
+        "modeOpt": "",
+        "modeOptType": "query",
+        "queryOpt": "",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "days",
+                "type": "int",
+                "valueType": "msg",
+                "value": "payload.days",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 740,
+        "y": 1640,
+        "wires": [
+            [
+                "fdc88186cd06b893"
+            ]
+        ]
+    },
+    {
+        "id": "fdc88186cd06b893",
+        "type": "http response",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 930,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "d0646f51d954f41d",
+        "type": "function",
+        "z": "72e4c9a3efc7b7f5",
+        "name": "",
+        "func": "msg.payload.days = Number(msg.payload.days);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1640,
+        "wires": [
+            [
+                "5b7b1c01a4dcc52a"
+            ]
+        ]
+    },
+    {
+        "id": "501556d267ceed11",
+        "type": "http in",
+        "z": "847437b0bfbd5c46",
+        "name": "",
+        "url": "/api/trimming/parts-in-basket",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "27d75fd0127afa70"
+            ]
+        ]
+    },
+    {
+        "id": "0262d13d0607fd59",
+        "type": "http response",
+        "z": "847437b0bfbd5c46",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 850,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "27d75fd0127afa70",
+        "type": "MSSQL",
+        "z": "847437b0bfbd5c46",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "SELECT d.dmc, d.ToolID, d.ManufacturingPlant, d.ProdDate, d.ProductionShift\r\n\t, s.ToolDetailID, s.set_id\r\nFROM dbo.mdl_data d\r\n\tRIGHT JOIN (\r\n\t\tSELECT a.Set_ID, m.DMC, m.ToolDetailID\r\n\t\tFROM [NORIS].[dbo].[MDL_Data_Set_Assignment] a\r\n\t\t\tLEFT JOIN dbo.MDL_Data m ON a.ID_MDL_Data = m.ID_MDL_Data\r\n\t\tWHERE m.ManufacturingPlant = 2501 and set_id IN ( \r\n\t\t SELECT TOP 1 Set_ID\r\n    FROM dbo.MDL_Data D\r\n    INNER JOIN dbo.MDL_Data_Set_Assignment A ON A.ID_MDL_Data = D.ID_MDL_Data\r\n    WHERE ManufacturingPlant = 2501\r\n    AND ToolID = @basket\r\n\tORDER BY Set_ID DESC)\r\n\t) s\r\n\tON d.DMC = s.DMC\r\n\tLEFT JOIN dbo.Anlage a\r\n\tON d.ManufacturingPlant = a.Anlagennummer\r\n\tWHERE a.Anlagengruppe = 1",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "basket",
+                "type": "int",
+                "valueType": "msg",
+                "value": "payload.basket",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 540,
+        "y": 140,
+        "wires": [
+            [
+                "0262d13d0607fd59"
+            ]
+        ]
+    },
+    {
+        "id": "4239dd77b5eec963",
+        "type": "http in",
+        "z": "847437b0bfbd5c46",
+        "name": "",
+        "url": "/api/trimming/parts-uploading",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 340,
+        "wires": [
+            [
+                "03a5064b3fc46934"
+            ]
+        ]
+    },
+    {
+        "id": "8a95808f612fb217",
+        "type": "http response",
+        "z": "847437b0bfbd5c46",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "b59a8079d50b2012",
+        "type": "MSSQL",
+        "z": "847437b0bfbd5c46",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": " if exists (select * from dbo.MDL_Data where ManufacturingPlant = 2600 and DMC = @dmc)\r\n  begin\r\n\treturn \r\n  end\r\n\r\nINSERT INTO [dbo].[MDL_Data]\r\n( [ManufacturingLine]\r\n\t\t,[ManufacturingPlant]\r\n\t\t,[ManufacturingPlantDetail]\r\n\t\t,[EMP]\r\n\t\t,[ID_CodeGruppe]\r\n\t\t,[TimeStamp]\r\n\t\t,[Start]\r\n\t\t,[End]\r\n\t\t,[AvgTime]\r\n\t\t,[Value]\r\n\t\t,[ProductionWeek]\r\n\t\t,[ProductionShift]\r\n\t\t,[ProductionDate]\r\n\t\t,[PartNumber]\r\n\t\t,[ToolID]\r\n\t\t,[DMC]\r\n\t\t,[DMCPre]\r\n\t\t,[ID_VarVal]\r\n\t\t,[SAP_EXPORT_DATA]\r\n\t\t,[CalcPlannedTime]\r\n\t\t,[ID_CastBatch]\r\n\t\t,[ID_MDL_DataDetail]\r\n\t\t,[CycleTime_MfPlant]\r\n\t\t,[CycleTime_MfPlantD]\r\n\t\t,[ID_PartState]\r\n\t\t,[manualbooked]\r\n\t\t,[ID_NOR_Weight_Version]\r\n\t\t,[partition]\r\n\t\t,[Shiftgroup]\r\n\t\t,[qcode]\r\n\t\t,[ToolState]\r\n\t\t,[ToolDetailID]\r\n\t\t,[CustomDataId]) \r\nSELECT \r\n\t\t[ManufacturingLine]\r\n\t\t,2600\r\n\t\t,[ManufacturingPlantDetail]\r\n\t\t,@personId\r\n\t\t,[ID_CodeGruppe]\r\n\t\t,GETDATE()\r\n\t\t,GETDATE()\r\n\t\t,GETDATE()\r\n\t\t,NULL\r\n\t\t,[Value]\r\n\t\t,dbo.GetKWofDate(GETDATE())\r\n\t\t,dbo.GetShiftSQL(GETDATE())\r\n\t\t,dbo.GetShiftDateSQL(GETDATE())\r\n\t\t,[PartNumber]\r\n\t\t,[ToolID]\r\n\t\t,[DMC]\r\n\t\t,[DMCPre]\r\n\t\t,[ID_VarVal]\r\n\t\t,[SAP_EXPORT_DATA]\r\n\t\t,[CalcPlannedTime]\r\n\t\t,[ID_CastBatch]\r\n\t\t,[ID_MDL_DataDetail]\r\n\t\t,[CycleTime_MfPlant]\r\n\t\t,[CycleTime_MfPlantD]\r\n\t\t,[ID_PartState]\r\n\t\t,[manualbooked]\r\n\t\t,[ID_NOR_Weight_Version]\r\n\t\t,[partition]\r\n\t\t,[Shiftgroup]\r\n\t\t,[qcode]\r\n\t\t,[ToolState]\r\n\t\t,[ToolDetailID]\r\n\t\t,[CustomDataId]\r\n\tFROM [NORIS].[dbo].[MDL_Data]\r\n\twhere ManufacturingPlant = 2501 and DMC = @dmc",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "",
+        "paramsOptType": "editor",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [
+            {
+                "output": false,
+                "name": "dmc",
+                "type": "VarChar(50)",
+                "valueType": "msg",
+                "value": "payload.dmc",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            },
+            {
+                "output": false,
+                "name": "personId",
+                "type": "int",
+                "valueType": "msg",
+                "value": "payload.personId",
+                "options": {
+                    "nullable": true,
+                    "primary": false,
+                    "identity": false,
+                    "readOnly": false
+                }
+            }
+        ],
+        "x": 640,
+        "y": 520,
+        "wires": [
+            [
+                "d6b3163d981a7f65"
+            ]
+        ]
+    },
+    {
+        "id": "d6b3163d981a7f65",
+        "type": "array-loop",
+        "z": "847437b0bfbd5c46",
+        "name": "",
+        "key": "ald6b3163d981a7f65",
+        "keyType": "msg",
+        "reset": true,
+        "resetValue": "value-null",
+        "array": "array",
+        "arrayType": "msg",
+        "x": 640,
+        "y": 340,
+        "wires": [
+            [
+                "8a95808f612fb217"
+            ],
+            [
+                "b59a8079d50b2012"
+            ]
+        ]
+    },
+    {
+        "id": "03a5064b3fc46934",
+        "type": "function",
+        "z": "847437b0bfbd5c46",
+        "name": "",
+        "func": "msg.array = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 340,
+        "wires": [
+            [
+                "d6b3163d981a7f65"
+            ]
+        ]
+    },
+    {
+        "id": "eb3abbb3c1dee2de",
+        "type": "comment",
+        "z": "847437b0bfbd5c46",
+        "name": "get parts info",
+        "info": "",
+        "x": 170,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "e4bdffa5d42f0fbe",
+        "type": "comment",
+        "z": "847437b0bfbd5c46",
+        "name": "save parts",
+        "info": "",
+        "x": 140,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "4b6eec862f0a6d8a",
+        "type": "subflow:72e4c9a3efc7b7f5",
+        "z": "b20d92358b62714c",
+        "name": "api-lpa",
+        "x": 370,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "45e757429da324b1",
+        "type": "comment",
+        "z": "b20d92358b62714c",
+        "name": "分层审核",
+        "info": "",
+        "x": 360,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d9c69080b95731d3",
+        "type": "subflow:fb8670bbc5e8dc56",
+        "z": "b20d92358b62714c",
+        "name": "authentication",
+        "x": 130,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "921dca48048d8033",
+        "type": "comment",
+        "z": "b20d92358b62714c",
+        "name": "/api/auth",
+        "info": "",
+        "x": 130,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "a2fa7b2d59cffcc1",
+        "type": "comment",
+        "z": "b20d92358b62714c",
+        "name": "/api/melting",
+        "info": "",
+        "x": 580.5,
+        "y": 78,
+        "wires": []
+    },
+    {
+        "id": "9aa97522b0cb4d70",
+        "type": "subflow:a5557649e9c06dfb",
+        "z": "b20d92358b62714c",
+        "name": "api-melting",
+        "x": 568.75,
+        "y": 131,
+        "wires": []
+    },
+    {
+        "id": "8320e14ec51ef3c8",
+        "type": "comment",
+        "z": "b20d92358b62714c",
+        "name": "/api/dashboard",
+        "info": "",
+        "x": 164.7321319580078,
+        "y": 322.49997901916504,
+        "wires": []
+    },
+    {
+        "id": "f5b6e5c9437fbdf9",
+        "type": "subflow:eb0f96b6af6ca2c8",
+        "z": "b20d92358b62714c",
+        "name": "dashboards",
+        "x": 161.64283752441406,
+        "y": 383.1607208251953,
+        "wires": []
+    },
+    {
+        "id": "4f42cbc9d88eb2c4",
+        "type": "MSSQL",
+        "z": "b20d92358b62714c",
+        "mssqlCN": "a0d7190cb2b84222",
+        "name": "",
+        "outField": "payload",
+        "returnType": 0,
+        "throwErrors": 1,
+        "query": "",
+        "modeOpt": "queryMode",
+        "modeOptType": "query",
+        "queryOpt": "payload",
+        "queryOptType": "editor",
+        "paramsOpt": "queryParams",
+        "paramsOptType": "none",
+        "rows": "rows",
+        "rowsType": "msg",
+        "params": [],
+        "x": 880,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c3b464664c1e0e97",
+        "type": "subflow:847437b0bfbd5c46",
+        "z": "b20d92358b62714c",
+        "name": "api-trimming",
+        "x": 570,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e304192b8dcc66b1",
+        "type": "comment",
+        "z": "b20d92358b62714c",
+        "name": "/api/trimming",
+        "info": "",
+        "x": 570,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "0fc342f101df7e83",
+        "type": "uibuilder",
+        "z": "645dacd42e5b46ff",
+        "name": "",
+        "topic": "",
+        "url": "myplant-dev",
+        "fwdInMessages": false,
+        "allowScripts": false,
+        "allowStyles": false,
+        "copyIndex": true,
+        "templateFolder": "blank",
+        "extTemplate": "",
+        "showfolder": false,
+        "reload": true,
+        "sourceFolder": "src",
+        "deployedVersion": "5.0.0",
+        "x": 1018,
+        "y": 284,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "5dafb03e09ab3473",
+        "type": "watch",
+        "z": "645dacd42e5b46ff",
+        "name": "",
+        "files": "C:\\\\Users\\\\jduan\\\\.node-red\\\\projects\\\\myplant-node-red\\\\uibuilder\\\\myplant-dev\\\\src",
+        "recursive": true,
+        "x": 350,
+        "y": 268,
+        "wires": [
+            [
+                "972385a60da18eaf"
+            ]
+        ]
+    },
+    {
+        "id": "972385a60da18eaf",
+        "type": "change",
+        "z": "645dacd42e5b46ff",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "_uib",
+                "pt": "msg",
+                "to": "{\"reload\":true}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 754.5,
+        "y": 298,
+        "wires": [
+            [
+                "0fc342f101df7e83"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+<div id="trimmingBasketUnloading" x-data="TrimmingBasketUnloadingService()" x-init="onInit();"
+    class="flex flex-col min-w-0 w-full h-full">
+
+    <div class="flex flex-col flex-grow w-full sm:w-auto py-8 px-4 sm:p-12">
+        <div class="flex items-center justify-between w-full py-4">
+            <div class="w-full text-left text-3xl font-semibold tracking-tight leading-8">切边上线扫码</div>
+        </div>
+        <form class="w-full mb-4" @submit.prevent="onSubmit()">
+            <div class="flex-none w-full text-left mb-4">
+                <input id="basketNumberInput" x-model="basketNumber" type="text" autocomplete="off"
+                    :placeholder="i18next.t('tk_basket_number')"
+                    class="choices choices__inner mb-1 uppercase placeholder-gray-500 border border-gray-600" />
+                <p x-show="isBasketNumberValid()" x-text="isBasketNumberValid()"
+                    class="text-red-500 text-xs text-left italic pt-2">
+                </p>
+            </div>
+        </form>
+        <div class="flex flex-row w-full h-full py-8 bg-card">
+            <div id="dmcDataList" class="w-full h-full ag-theme-alpine"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+<div id="pre-heating-booking" x-data="PreHeatingTimeService()" x-init="onInit()"
+    class="flex flex-col min-w-0 w-full h-full overflow-y-hidden">
+    <div class="flex flex-col flex-grow w-full sm:w-auto py-8 px-4 sm:p-12 overflow-y-hidden">
+        <div class="flex flex-col items-center  overflow-y-auto">
+            <div class="flex items-center justify-between w-full py-4">
+                <div class="w-full text-left text-3xl font-semibold tracking-tight leading-8">热处理前出入库扫码</div>
+            </div>
+            <div x-data="{ tab: 'check-in'}" class="flex flex-col w-full md:w-128">
+                <div class="flex mx-2 mb-4 space-x-4 text-2xl border-b border-gray-300">
+                    <div class="hover:text-indigo-600 py-2 cursor-pointer"
+                        :class="{'text-indigo-600 border-b border-indigo-600': tab === 'check-in'}"
+                        @click="tab = 'check-in'">
+                        入库扫码</div>
+
+                    <div class="hover:text-indigo-600 py-2 pl-2 cursor-pointer"
+                        :class="{'text-indigo-600 border-b border-indigo-600': tab == 'check-out'}"
+                        @click="tab = 'check-out'">出库扫码</div>
+
+                </div>
+                <!-- check in -->
+                <div x-show="tab === 'check-in'">
+                    <form class="w-full mb-4" @submit.prevent="onSubmitCheckIn()">
+                        <div class="flex-none w-full text-left mb-4">
+                            <input id="checkInRoom" x-model="roomStringCheckIn" type="text" autocomplete="off"
+                                :placeholder="i18next.t('tk_room_number')"
+                                class="choices choices__inner mb-1 uppercase placeholder-gray-500 border border-gray-600" />
+                            <p x-show="isRoomStringCheckInValid()" x-text="isRoomStringCheckInValid()"
+                                class="text-red-500 text-xs text-left italic pt-2">
+                            </p>
+                        </div>
+                        <div class="flex-none w-full text-left mb-4">
+                            <input id="checkInBasket" x-model="basketNumberCheckIn" type="text" autocomplete="off"
+                                :placeholder="i18next.t('tk_basket_number')"
+                                class="choices choices__inner mb-1 uppercase placeholder-gray-500 border border-gray-600" />
+                            <p x-show="isBasketNumberCheckInValid()" x-text="isBasketNumberCheckInValid()"
+                                class="text-red-500 text-xs text-left italic pt-2">
+                            </p>
+                        </div>
+                        <div class="flex-none w-full text-left mb-4">
+                            <button id="checkInSave" type="submit"
+                                :disabled="isBasketNumberCheckInValid() || isRoomStringCheckInValid()"
+                                :class="isBasketNumberCheckInValid() || isRoomStringCheckInValid() ? 'opacity-50 cursor-not-allowed' : ''"
+                                class="w-full h-18 px-3 py-4 text-white text-3xl bg-indigo-500 rounded-md focus:outline-none duration-100 ease-in-out"
+                                x-text="i18next.t('tk_save')"></button>
+                        </div>
+                        <div class="flex-none w-full text-left mb-4">
+                            <button type="button" @click="onResetCheckIn();"
+                                class="w-full h-18 px-3 py-4 text-white text-3xl bg-indigo-500 rounded-md focus:outline-none duration-100 ease-in-out"
+                                x-text="i18next.t('tk_reset')"></button>
+                        </div>
+                    </form>
+                </div>
+                <!-- check out -->
+                <div x-show="tab === 'check-out'">
+                    <form class="w-full mb-4" @submit.prevent="onSubmitCheckOut()">
+                        <div class="flex-none w-full text-left mb-4">
+                            <input id="checkOutBasket" onkeydown="return (event.keyCode !==13 )"
+                                x-model="basketNumberCheckOut" type="text" autocomplete="off"
+                                :placeholder="i18next.t('tk_basket_number')"
+                                class="choices choices__inner mb-1 uppercase placeholder-gray-500 border border-gray-600" />
+                            <p x-show="isBasketNumberCheckOutValid()" x-text="isBasketNumberCheckOutValid()"
+                                class="text-red-500 text-xs text-left italic pt-2">
+                            </p>
+                        </div>
+
+                        <div class="flex-none w-full text-left mb-4">
+                            <button id="checkOutSave" type="submit" :disabled="isBasketNumberCheckOutValid()"
+                                :class="isBasketNumberCheckOutValid() ? 'opacity-50 cursor-not-allowed' : ''"
+                                class="w-full h-18 px-3 py-4 text-white text-3xl bg-indigo-500 rounded-md focus:outline-none duration-100 ease-in-out"
+                                x-text="i18next.t('tk_save')"></button>
+                        </div>
+                        <div class="flex-none w-full text-left mb-4">
+                            <button type="button" @click="onResetCheckOut();"
+                                class="w-full h-18 px-3 py-4 text-white text-3xl bg-indigo-500 rounded-md focus:outline-none duration-100 ease-in-out"
+                                x-text="i18next.t('tk_reset')"></button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

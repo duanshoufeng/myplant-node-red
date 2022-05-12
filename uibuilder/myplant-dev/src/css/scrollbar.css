@@ -1,0 +1,29 @@
+::-webkit-scrollbar {
+  background-color: peachpuff;
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: coral;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: orangered;
+}
+
+.ag-root ::-webkit-scrollbar {
+  height: 1em;
+}
+
+.ag-header-cell-label {
+  justify-content: center;
+}

@@ -1,0 +1,48 @@
+<div x-data="PreHeatingStorageService()" id="pre-heating-storage-dashboard"
+    @update-casting-time.window="await updateCastingTime($event.detail)" x-init="await onInit()"
+    class="flex items-center w-full h-full overflow-hidden dark:bg-gray-600">
+    <div class="flex w-full h-full mx-auto p-6 md:p-8 overflow-hidden">
+        <div class="flex flex-col w-full h-full overflow-hidden">
+            <div class="flex items-center justify-between w-full h-10 mb-8">
+                <div class="w-full text-left text-3xl font-semibold tracking-tight leading-8 dark:text-gray-200">
+                    热处理前库位状态</div>
+            </div>
+
+            <div class="flex flex-col flex-auto overflow-y-auto">
+                <div class="flex flex-col flex-auto bg-card shadow rounded-2xl ">
+                    <div class="h-12 my-6 text-2xl md:text-3xl font-semibold dark:text-gray-200">
+                        <span class="bg-green-300 p-4 rounded-2xl">绿色=>静置时间大于24h优先出库</span>
+                        <span class="bg-blue-300 p-4 rounded-2xl">蓝色=>静置时间大于24h</span>
+                        <span class="bg-yellow-300 p-4 rounded-2xl">黄色=>静置时间小于24h</span>
+                    </div>
+                    <div class="flex flex-col h-1/2 md:flex-row justify-center items-center">
+                        <div class="flex flex-col h-full w-full md:w-1/3 border-2">
+                            <div class="bg-gray-300 p-4 text-2xl font-bold">库位01</div>
+                            <div id="room01" class="h-full"></div>
+                        </div>
+                        <div class="flex flex-col h-full w-full md:w-1/3 border-2">
+                            <div class="bg-gray-300 p-4 text-2xl font-bold">库位02</div>
+                            <div id="room02" class="h-full"></div>
+                        </div>
+                        <div class="flex flex-col h-full w-full md:w-1/3 border-2">
+                            <div class="bg-gray-300 p-4 text-2xl font-bold">库位03</div>
+                            <div id="room03" class="h-full"></div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col h-1/2 md:flex-row justify-center items-center">
+                        <div class="flex flex-col h-full w-full md:w-1/3 border-2">
+                            <div class="bg-gray-300 p-4 text-2xl font-bold">库位04</div>
+                            <div id="room04" class="h-full"></div>
+                        </div>
+                        <div class="flex flex-col h-full w-full md:w-1/3 border-2">
+                            <div class="bg-gray-300 p-4 text-2xl font-bold">库位05</div>
+                            <div id="room05" class="h-full"></div>
+                        </div>
+                        <div class="w-full md:w-1/3"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

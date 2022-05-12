@@ -1,0 +1,144 @@
+<div x-data="ReturnsWeighingService()" @send-weight.window="getWeight($event.detail)" x-init="onInit()"
+    class="flex flex-col min-w-0 w-full h-full">
+    <div
+        class="flex justify-center items-start sm:items-center w-full h-full sm:w-auto py-8 px-4 sm:p-12 overflow-auto">
+
+        <div class="flex flex-col w-full max-w-lg sm:w-320 mx-auto sm:mx-0 justify-center items-center">
+            <div class="flex w-full justify-center items-center py-2">
+                <span class="text-3xl font-bold" x-text="i18next.t('tk_returns_weighing')"></span>
+            </div>
+            <form class="w-full mb-4" @submit.prevent="onSubmit()">
+                <div x-init="categoryChoicesInit()" class="flex-none w-full text-left mb-4">
+                    <select x-model="selectedCategory" x-ref="categorySelector">
+                    </select>
+                    <p x-show="isCategoryValid()" x-text="isCategoryValid()"
+                        class="text-red-500 text-xs text-left italic">
+                    </p>
+                </div>
+                <div x-init="sourceChoicesInit()" class="flex-none w-full text-left mb-4">
+                    <select x-model="selectedSource" x-ref="sourceSelector">
+                    </select>
+                    <p x-show="isSourceValid()" x-text="isSourceValid()" class="text-red-500 text-xs text-left italic">
+                    </p>
+                </div>
+
+                <div class="flex-none w-full text-left mb-4">
+                    <input @keyup.enter="await onScanBasket()" x-model="basketNumber" type="text"
+                        :placeholder="i18next.t('tk_backet_number')" class="choices choices__inner mb-1 uppercase" />
+                    <p x-show="isBasketNumberValid()" x-text="isBasketNumberValid()"
+                        class="text-red-500 text-xs text-left italic pt-2">
+                    </p>
+                </div>
+
+                <div class="flex items-center w-full text-left mb-4">
+                    <label x-text="i18next.t('tk_gross_weight')"
+                        class="w-2/5 text-gray-500 font-bold text-left text-3xl">
+                    </label>
+                    <input id="returnsWeight" disabled x-model="grossWeight" type="text"
+                        class="w-3/5 choices choices__inner mb-1 uppercase" />
+                    <p x-show="isGrossWeightValid()" x-text="isGrossWeightValid()"
+                        class="text-red-500 text-xs text-left italic pt-2">
+                    </p>
+                </div>
+                <div class="flex items-center w-full text-left mb-4">
+                    <label x-text="i18next.t('tk_tare_weight')"
+                        class="w-2/5 text-gray-500 font-bold text-left text-3xl">
+                    </label>
+                    <input id="tareWeight" disabled x-model="tareWeight" type="text"
+                        class="w-3/5 choices choices__inner mb-1 uppercase" />
+                    <p x-show="isTareWeightValid()" x-text="isTareWeightValid()"
+                        class="text-red-500 text-xs text-left italic pt-2">
+                    </p>
+                </div>
+                <div class="flex flex-col w-full text-left mb-4">
+                    <div class="flex items-center w-full">
+                        <label x-text="i18next.t('tk_net_weight')"
+                            class="w-2/5 text-gray-500 font-bold text-left text-3xl">
+                        </label>
+                        <input id="netWeight" disabled x-model="netWeight" type="text"
+                            class="w-3/5 choices choices__inner mb-1 uppercase" />
+                    </div>
+                    <p x-show="isNetWeightValid()" x-text="isNetWeightValid()"
+                        class="text-red-500 text-xs text-left italic pt-2">
+                    </p>
+                </div>
+
+                <div class="flex-none w-full text-left mb-4">
+                    <button type="submit"
+                        :disabled="isCategoryValid() || isSourceValid() || isGrossWeightValid() || isTareWeightValid() || isNetWeightValid() || isBasketNumberValid()"
+                        :class="isCategoryValid() || isSourceValid() || isGrossWeightValid() || isTareWeightValid() || isNetWeightValid() || isBasketNumberValid() ? 'opacity-50 cursor-not-allowed' : ''"
+                        class="w-full h-18 px-3 py-4 text-white text-3xl bg-indigo-500 rounded-md focus:outline-none duration-100 ease-in-out"
+                        x-text="i18next.t('tk_print')"></button>
+                </div>
+                <div class="flex-none w-full text-left mb-4">
+                    <button type="button" @click="onPrint()"
+                        class="w-full h-18 px-3 py-4 text-white text-3xl bg-indigo-500 rounded-md focus:outline-none duration-100 ease-in-out"
+                        x-text="i18next.t('tk_save')"></button>
+                </div>
+            </form>
+        </div>
+
+        <div x-show="false" id="print">
+            <table border="1" style="height: 284px; width: 794px; border-collapse: collapse; border-style: none;">
+                <tbody>
+                    <tr style="height: 58px;">
+                        <td style="width: 587.188px; height: 58px;" colspan="3">
+                            <h2 style="text-align: center;"><strong>回炉料记录单</strong></h2>
+                        </td>
+                        <td style="width: 205.812px; height: 58px;">
+                            <p style="text-align: right;"></p>
+                            <p style="text-align: right;"></p>
+                            <p style="text-align: right;"><sub>ALSi9Cu3</sub></p>
+                            <p style="text-align: right;"><sub>CHQ-PRO-WI-0018-R02</sub></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 67px;">
+                        <td style="width: 195.719px; height: 67px; text-align: center;">材料分类</td>
+                        <td style="width: 195.719px; height: 67px; text-align: center;">材料来源</td>
+                        <td style="width: 195.75px; text-align: center; height: 67px;">重量</td>
+                        <td style="width: 205.812px; height: 67px; text-align: center;">工号</td>
+                    </tr>
+                    <tr style="height: 58px;">
+                        <td x-text="selectedCategory.value" style="width: 195.719px; text-align: center; height: 58px;">
+                        </td>
+                        <td x-text="selectedSource.value" style="width: 195.719px; text-align: center; height: 58px;">
+                        </td>
+                        <td x-text="netWeight" style="width: 195.75px; text-align: center; height: 58px;"></td>
+                        <td x-text="personId" style="width: 205.812px; text-align: center; height: 58px;"></td>
+                    </tr>
+                    <tr style="height: 51px;">
+                        <td style="width: 195.719px; text-align: center; height: 51px;" colspan="4"><svg
+                                id="barcode"></svg></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>
+            <table border="1" style="border-collapse: collapse; width: 794px; height: 94px;">
+                <tbody>
+                    <tr style="height: 33px;">
+                        <td style="width: 99.125px; height: 33px; text-align: center;">M1</td>
+                        <td style="width: 75.0938px; height: 33px; text-align: center;">M2</td>
+                        <td style="width: 123.141px; height: 33px; text-align: center;">M3</td>
+                        <td style="width: 99.125px; height: 33px; text-align: center;">M4</td>
+                        <td style="width: 88.1094px; height: 33px; text-align: center;">M5</td>
+                        <td style="width: 110.125px; height: 33px; text-align: center;">S1</td>
+                        <td style="width: 99.125px; height: 33px; text-align: center;">S2</td>
+                        <td style="width: 99.1562px; height: 33px; text-align: center;">S3</td>
+                    </tr>
+                    <tr style="height: 61px;">
+                        <td style="width: 99.125px; height: 61px; text-align: center;">报废缸体</td>
+                        <td style="width: 75.0938px; height: 61px; text-align: center;">料饼</td>
+                        <td style="width: 123.141px; height: 61px; text-align: center;">真空流道和渣包</td>
+                        <td style="width: 99.125px; height: 61px; text-align: center;">切边余料</td>
+                        <td style="width: 88.1094px; height: 61px; text-align: center;">烫模件</td>
+                        <td style="width: 110.125px; height: 61px; text-align: center;">压铸机台返回</td>
+                        <td style="width: 99.125px; height: 61px; text-align: center;">切边返回</td>
+                        <td style="width: 99.1562px; height: 61px; text-align: center;">外部退回</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+</div>
