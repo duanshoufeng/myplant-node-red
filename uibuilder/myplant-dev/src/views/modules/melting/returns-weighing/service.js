@@ -5,6 +5,9 @@ import Auth from "../../../../services/auth.js";
 const onBasketNumberValid = (self) => {
   const isEmpty = validator.isEmpty(self.basketNumber, { ignore_whitespace: true });
   if (isEmpty) return i18next.t("tk_basket_number_is_required");
+  if (self.basketNumber.split("-").length !== 3) return i18next.t("tk_basket_number_format_error");
+  const isInt = validator.isInt(self.basketNumber.split("-")[2], { min: 1, max: 1000 });
+  if (!isInt) return i18next.t("tk_basket_number_format_error");
   return null;
 };
 
@@ -127,10 +130,15 @@ window.ReturnsWeighingService = () => {
     async onScanBasket() {
       await doScanBasket(this);
     },
-    getWeight(weight) {
-      this.grossWeight = weight;
-      const netWeight = parseInt(this.grossWeight) - parseInt(this.tareWeight);
-      this.netWeight = netWeight.toString();
+    getWeight(payload) {
+      try {
+        let weight = payload.trim().split(",")[2].trim().toUpperCase().slice(0, -2).trim();
+        this.grossWeight = weight;
+        const netWeight = parseInt(this.grossWeight) - parseInt(this.tareWeight);
+        this.netWeight = netWeight.toString();
+      } catch (error) {
+        console.error(error);
+      }
     },
     onPrint() {
       try {

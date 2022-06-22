@@ -16,8 +16,9 @@ export const ht01Zone01Options = {
     },
   },
   chart: {
-    height: "300px",
     type: "line",
+    width: "100%",
+    height: "auto",
     zoom: {
       enabled: false,
     },
@@ -99,7 +100,8 @@ export const ht01Zone02Options = {
     },
   },
   chart: {
-    height: "300px",
+    width: "100%",
+    height: "auto",
     type: "line",
     zoom: {
       enabled: false,
@@ -182,7 +184,8 @@ export const ht01Zone03Options = {
     },
   },
   chart: {
-    height: "300px",
+    width: "100%",
+    height: "auto",
     type: "line",
     zoom: {
       enabled: false,
@@ -265,7 +268,8 @@ export const ht01Zone04Options = {
     },
   },
   chart: {
-    height: "300px",
+    width: "100%",
+    height: "auto",
     type: "line",
     zoom: {
       enabled: false,
@@ -348,7 +352,8 @@ export const ht01Zone05Options = {
     },
   },
   chart: {
-    height: "300px",
+    width: "100%",
+    height: "auto",
     type: "line",
     zoom: {
       enabled: false,
@@ -431,7 +436,8 @@ export const ht01Zone06Options = {
     },
   },
   chart: {
-    height: "300px",
+    width: "100%",
+    height: "auto",
     type: "line",
     zoom: {
       enabled: false,
@@ -514,7 +520,8 @@ export const ht01Zone07Options = {
     },
   },
   chart: {
-    height: "300px",
+    width: "100%",
+    height: "auto",
     type: "line",
     zoom: {
       enabled: false,

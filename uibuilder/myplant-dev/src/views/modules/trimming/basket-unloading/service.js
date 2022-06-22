@@ -7,7 +7,7 @@ const onBasketNumberValid = (self) => {
   const isEmpty = validator.isEmpty(self.basketNumber, { ignore_whitespace: true });
   if (isEmpty) return i18next.t("tk_basket_number_is_required");
   if (self.basketNumber.split("-").length !== 3) return i18next.t("tk_basket_number_format_error");
-  const isInt = validator.isInt(self.basketNumber.split("-")[2], { min: 1, max: 500 });
+  const isInt = validator.isInt(self.basketNumber.split("-")[2], { min: 1, max: 1000 });
   if (!isInt) return i18next.t("tk_basket_number_format_error");
   return null;
 };

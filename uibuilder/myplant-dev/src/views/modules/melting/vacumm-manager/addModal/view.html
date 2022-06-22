@@ -1,0 +1,86 @@
+<div x-data="VacuumManagerForm()" x-init="onInit()">
+    <!-- Modal -->
+    <div @open-vacuum-manager-creation.window="showModal = true" @close-on-submit.window="showModal = false;"
+        class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black bg-opacity-50"
+        x-show="showModal" x-transition:enter="motion-safe:ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100">
+        <!-- Modal inner -->
+        <div class="w-2/5 max-w-3xl px-6 py-4 mx-auto text-left bg-white rounded shadow-lg overflow-auto">
+            <!-- Title / Close-->
+            <div class="flex items-center justify-between">
+                <h3 class="text-xl text-gray-800 md:text-2xl lg:text-3xl"></h3>
+
+                <button type="button" class="z-50 cursor-pointer" @click="reset(); showModal = false;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- content -->
+            <form @submit.prevent="onSubmit()">
+                <div x-data="{'showKeyboard':false}" class="flex-none w-full text-left mb-4">
+                    <div class="text-xl mb-2">试样编号</div>
+                    <div @click.away="showKeyboard=false" class="mb-3 pt-0">
+                        <input x-model="code" @click="showKeyboard=true" type="text"
+                            class="choices choices__inner mb-1 uppercase withKeyboard" autocomplete="off" />
+                        <p x-show="validForm().isCodeValid()" x-text="validForm().isCodeValid()"
+                            class="text-red-500 text-xs text-left italic">
+                        </p>
+                        <div x-show="showKeyboard" class="keyboard-1"></div>
+                    </div>
+                </div>
+
+                <div x-init="machineChoicesInit()" class="flex-none w-full text-left mb-4">
+                    <div class="text-xl mb-2">定量炉</div>
+                    <select x-model='selectedMachine' x-ref="machineSelector">
+                    </select>
+                    <p x-show="validForm().isMachineValid()" x-text="validForm().isMachineValid()"
+                        class="text-red-500 text-xs text-left italic">
+                    </p>
+                </div>
+
+                <div x-data="{'showKeyboard':false}" class="flex-none w-full text-left mb-4">
+                    <div class="text-xl mb-2">真空密度</div>
+                    <div @click.away="showKeyboard=false" class="mb-3 pt-0">
+                        <input x-model="vacuumDensity" @click="showKeyboard=true" type="text"
+                            class="choices choices__inner mb-1 uppercase withKeyboard" />
+                        <p x-show="validForm().isVacuumDensityValid()" x-text="validForm().isVacuumDensityValid()"
+                            class="text-red-500 text-xs text-left italic"></p>
+                        <div x-show="showKeyboard" class="keyboard-2"></div>
+                    </div>
+                </div>
+                <div x-data="{'showKeyboard':false}" class="flex-none w-full text-left mb-4">
+                    <div class="text-xl mb-2">大气密度</div>
+                    <div @click.away="showKeyboard=false" class="mb-3 pt-0">
+                        <input x-model="airDensity" @click="showKeyboard=true" type="text"
+                            class="choices choices__inner mb-1 uppercase withKeyboard" />
+                        <p x-show="validForm().isAirDensityValid()" x-text="validForm().isAirDensityValid()"
+                            class="text-red-500 text-xs text-left italic"></p>
+                        <div x-show="showKeyboard" class="keyboard-3"></div>
+                    </div>
+                </div>
+
+                <div x-init="commentChoicesInit()" class="flex-none w-full text-left mb-4">
+                    <div class="text-xl mb-2">备注</div>
+                    <select x-model='comment' x-ref="commentSelector">
+                    </select>
+                    <p x-show="validForm().isCommentValid()" x-text="validForm().isCommentValid()"
+                        class="text-red-500 text-xs text-left italic">
+                    </p>
+                </div>
+
+                <div class="flex items-center justify-end">
+                    <button
+                        :disabled="validForm().isCodeValid() || validForm().isMachineValid() || validForm().isVacuumDensityValid() || validForm().isAirDensityValid() || validForm().isCommentValid() || validForm().isPctValid()"
+                        :class="validForm().isCodeValid() || validForm().isMachineValid() || validForm().isVacuumDensityValid() || validForm().isAirDensityValid() || validForm().isCommentValid() || validForm().isPctValid() ? 'opacity-50 cursor-not-allowed' : ''"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full ml-2">
+                        保存
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -8,14 +8,14 @@ function basketCellRenderer(params) {
             ${params.data.BasketString}
           </button>
           `;
-  } else if (params.data.CastingHours > 24 && params.data.ToCheckOut !== 1) {
+  } else if (params.data.CastingHours >= 24 && params.data.ToCheckOut !== 1) {
     eGui.innerHTML = `
           <button id="detail-btn" @click="window.open('https://chqnoris.as.nemak.net/nts/nts/set/detail/'+${params.data.SetId})"
             class="bg-blue-300 text-sm text-blue-700 py-1 px-4 border border-blue-500 rounded">
             ${params.data.BasketString}
           </button>
           `;
-  } else if (params.data.CastingHours < 24 || params.data.CastingHours === 24) {
+  } else if (params.data.CastingHours < 24) {
     eGui.innerHTML = `
           <button id="detail-btn" @click="window.open('https://chqnoris.as.nemak.net/nts/nts/set/detail/'+${params.data.SetId})"
             class="bg-yellow-300 text-sm text-blue-700 py-1 px-4 border border-blue-500 rounded">
@@ -37,14 +37,14 @@ function timeCellRenderer(params) {
             ${params.data.CastingTime}
           </button>
           `;
-  } else if (params.data.CastingHours > 24 && params.data.ToCheckOut !== 1) {
+  } else if (params.data.CastingHours >= 24 && params.data.ToCheckOut !== 1) {
     eGui.innerHTML = `
           <button id="detail-btn" 
             class="bg-blue-300 text-sm text-blue-700 py-1 px-4 border border-blue-500 rounded">
             ${params.data.CastingTime}
           </button>
           `;
-  } else if (params.data.CastingHours < 24 || params.data.CastingHours === 24) {
+  } else if (params.data.CastingHours < 24) {
     eGui.innerHTML = `
           <button id="detail-btn" 
             class="bg-yellow-300 text-sm text-blue-700 py-1 px-4 border border-blue-500 rounded">
@@ -100,7 +100,6 @@ export const room02Options = {
   },
   rowData: [],
   animateRows: true,
-  getRowId: (params) => params.data.id,
   onGridReady(params) {
     let gridWidth = document.getElementById("room02").offsetWidth;
     if (gridWidth > 0) params.api.sizeColumnsToFit();
@@ -123,7 +122,6 @@ export const room03Options = {
   },
   rowData: [],
   animateRows: true,
-  getRowId: (params) => params.data.id,
   onGridReady(params) {
     let gridWidth = document.getElementById("room03").offsetWidth;
     if (gridWidth > 0) params.api.sizeColumnsToFit();
@@ -146,7 +144,6 @@ export const room04Options = {
   },
   rowData: [],
   animateRows: true,
-  getRowId: (params) => params.data.id,
   onGridReady(params) {
     let gridWidth = document.getElementById("room04").offsetWidth;
     if (gridWidth > 0) params.api.sizeColumnsToFit();
@@ -169,7 +166,6 @@ export const room05Options = {
   },
   rowData: [],
   animateRows: true,
-  getRowId: (params) => params.data.id,
   onGridReady(params) {
     let gridWidth = document.getElementById("room05").offsetWidth;
     if (gridWidth > 0) params.api.sizeColumnsToFit();

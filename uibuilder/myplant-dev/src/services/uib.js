@@ -19,7 +19,6 @@ const Uib = () => {
       document.getElementById("ht01Zone06") ||
       document.getElementById("ht01Zone07");
     if (msg.topic === "heat_treatment_temperature_refresh" && isChartValid) {
-      console.log("hello abc");
       window.dispatchEvent(new CustomEvent("heat-treatment-temperature-refresh", { detail: msg.payload }));
     }
     // returns weight
@@ -29,6 +28,13 @@ const Uib = () => {
     // refresh pre heating storage dashboard
     if (msg.topic === "pre-heating-storage-dashboard" && document.getElementById("pre-heating-storage-dashboard")) {
       window.dispatchEvent(new CustomEvent("update-casting-time", { detail: msg.payload }));
+    }
+    // refresh heating basket uploading screen
+    if (msg.topic === "heating-basket-uploading-start" && document.getElementById("heating-basket-uploading")) {
+      window.dispatchEvent(new CustomEvent("heating-basket-uploading-start", { detail: msg.payload }));
+    }
+    if (msg.topic === "heating-basket-uploading-stop" && document.getElementById("heating-basket-uploading")) {
+      window.dispatchEvent(new CustomEvent("heating-basket-uploading-stop", { detail: msg.payload }));
     }
   });
 };

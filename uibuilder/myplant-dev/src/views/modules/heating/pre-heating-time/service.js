@@ -5,25 +5,28 @@ import Auth from "../../../../services/auth";
 const onBasketNumberCheckInValid = (self) => {
   const isEmpty = validator.isEmpty(self.basketNumberCheckIn, { ignore_whitespace: true });
   if (isEmpty) return i18next.t("tk_basket_number_is_required");
-  if (self.basketNumberCheckIn.split("-").length !== 3) return i18next.t("tk_basket_number_format_error");
-  const isFormat = validator.contains(self.basketNumberCheckIn.split("-")[1], "PTB");
+  const isFormat = self.basketNumberCheckIn.toUpperCase().startsWith("NCHQ-PTB-");
   if (!isFormat) return i18next.t("tk_basket_number_format_error");
+  const isInt = validator.isInt(self.basketNumberCheckIn.split("-")[2]);
+  if (!isInt) return i18next.t("tk_basket_number_format_error");
   return null;
 };
 const onBasketNumberCheckOutValid = (self) => {
   const isEmpty = validator.isEmpty(self.basketNumberCheckOut, { ignore_whitespace: true });
   if (isEmpty) return i18next.t("tk_basket_number_is_required");
-  if (self.basketNumberCheckOut.split("-").length !== 3) return i18next.t("tk_basket_number_format_error");
-  const isFormat = validator.contains(self.basketNumberCheckIn.split("-")[1], "PTB");
+  const isFormat = self.basketNumberCheckOut.toUpperCase().startsWith("NCHQ-PTB-");
   if (!isFormat) return i18next.t("tk_basket_number_format_error");
+  const isInt = validator.isInt(self.basketNumberCheckOut.split("-")[2]);
+  if (!isInt) return i18next.t("tk_basket_number_format_error");
   return null;
 };
 const onRoomStringCheckInValid = (self) => {
   const isEmpty = validator.isEmpty(self.roomStringCheckIn, { ignore_whitespace: true });
   if (isEmpty) return i18next.t("tk_storage_room_is_required");
-  if (self.roomStringCheckIn.split("-").length !== 3) return i18next.t("tk_room_number_format_error");
-  const isFormat = validator.contains(self.roomStringCheckIn.split("-")[1], "PHT");
+  const isFormat = self.roomStringCheckIn.toUpperCase().startsWith("NCHQ-PHT-");
   if (!isFormat) return i18next.t("tk_room_number_format_error");
+  const isInt = validator.isInt(self.roomStringCheckIn.split("-")[2]);
+  if (!isInt) return i18next.t("tk_room_number_format_error");
   return null;
 };
 
@@ -53,9 +56,9 @@ window.PreHeatingTimeService = () => {
         const user = await Auth.getCurrentUser();
 
         await http.post("/api/heating/pre-check-in", {
-          basketString: this.basketNumberCheckIn,
+          basketString: this.basketNumberCheckIn.toUpperCase(),
           basketNumber,
-          roomString: this.roomStringCheckIn,
+          roomString: this.roomStringCheckIn.toUpperCase(),
           personId: user.PersonId,
         });
 
@@ -67,7 +70,7 @@ window.PreHeatingTimeService = () => {
         this.onResetCheckIn();
         document.getElementById("checkInSave").disabled = false;
         NProgress.done();
-        Utils.info(i18next.t("tk_repeat_check_in_error"));
+        Utils.info(i18next.t("tk_check_in_error"));
         Utils.log(error);
       }
     },
@@ -80,7 +83,7 @@ window.PreHeatingTimeService = () => {
         const user = await Auth.getCurrentUser();
 
         await http.post("/api/heating/pre-check-out", {
-          basketString: this.basketNumberCheckOut,
+          basketString: this.basketNumberCheckOut.toUpperCase(),
           basketNumber,
           personId: user.PersonId,
         });

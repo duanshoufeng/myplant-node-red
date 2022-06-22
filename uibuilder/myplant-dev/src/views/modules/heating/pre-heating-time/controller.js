@@ -10,7 +10,7 @@ const signOut = () => {
   Alpine.store("currentUser").init();
 
   // let the user go back to the previous page when sign in by card
-  localStorage.setItem("prevUrl", "#/trimming/basket-unloading");
+  localStorage.setItem("prevUrl", "#/heating/pre-heating-time");
   window.location.replace("#/sign-in");
 };
 const resetTime = () => {
@@ -39,7 +39,7 @@ const PreHeatingTimeComponent = {
   async after_render() {
     inactivityTime();
 
-    document.getElementById("checkInBasket").focus();
+    document.getElementById("checkInRoom").focus();
   },
 };
 

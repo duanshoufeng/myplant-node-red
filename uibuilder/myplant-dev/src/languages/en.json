@@ -6,7 +6,7 @@
   "tk_sign_up": "Sign up",
   "tk_version": "Version",
   "tk_dashboards": "DASHBOARDS",
-  "tk_welcome": "Welcome to Nemak",
+  "tk_welcome": "Welcome to Nemak◌CHQ",
   "tk_already_have_an_account": "Already have an account?",
   "tk_username": "Username",
   "tk_personId": "Person Id",
@@ -101,6 +101,14 @@
   "tk_room_number": "Room Number",
   "tk_storage_room_is_required": "Storage room is required",
   "tk_room_number_format_error": "Storage room number format error",
-  "tk_repeat_check_in_error": "Repeat check in error",
-  "tk_repeat_check_out_error": "Repeat check out error"
+  "tk_check_in_error": "Pre HT check in error",
+  "tk_check_out_error": "Pre HT check out error",
+  "tk_menu_heating_manual_booking": "Heating manual booking",
+  "tk_booking_quantity_range_1_500": "Booking quantity must be gt 1 and lt 500",
+  "tk_part_number_is_required": "Part number is required",
+  "tk_tool_number_is_required": "Tool number is required",
+  "tk_booking_quantity": "Booking quantity",
+  "tk_save_error": "Save error",
+  "tk_menu_heating_basket_uploading": "HT basket uploading",
+  "tk_basket_weight_is_required": "Basket weight is required"
 }

@@ -4,6 +4,7 @@
 @import "scrollbar.css";
 @import "animation.css";
 @import "tailwind.css";
+@import "simple-keyboard.css";
 
 *,
 *::before,

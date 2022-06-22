@@ -1,0 +1,52 @@
+<div x-data="HeatingBasketUploadingService()" id="heating-basket-uploading"
+    @heating-basket-uploading-start.window="await startLoading($event.detail)"
+    @heating-basket-uploading-stop.window="finishLoading($event.detail)" x-init="await onInit()"
+    class="flex items-center w-full h-full overflow-hidden dark:bg-gray-600">
+    <div class="flex w-full h-full mx-auto p-6 md:p-8 overflow-hidden">
+        <div class="flex flex-col w-full h-full overflow-y-auto">
+            <div class="flex flex-col border rounded shadow-lg md:flex-row items-center w-full py-8">
+                <div class="flex justify-between w-full md:w-2/5">
+                    <div class="flex flex-col items-center ml-24">
+                        <span class="flex relative h-10 w-10 md:h-40 md:w-40">
+                            <span :class="result === 2 ? 'animate-none' : 'animate-ping'"
+                                class="absolute h-10 w-10 md:h-40 md:w-40 rounded-full bg-green-400 opacity-75"></span>
+                            <span class="rounded-full h-10 w-10 md:h-40 md:w-40 bg-green-500"></span>
+                        </span>
+                        <span class="text-xl md:text-3xl font-bold">可通行</span>
+                    </div>
+                    <div class="flex flex-col relative items-center mr-24">
+                        <span class="flex h-10 w-10 md:h-40 md:w-40">
+                            <span :class="result === 2 ? 'animate-ping' : 'animate-none'"
+                                class="absolute inline-flex h-10 w-10 md:h-40 md:w-40 rounded-full bg-red-400 opacity-75"></span>
+                            <span class="inline-flex rounded-full h-10 w-10 md:h-40 md:w-40 bg-red-500"></span>
+                        </span>
+                        <span class="text-xl md:text-3xl font-bold">不可通行</span>
+                    </div>
+
+                </div>
+                <div class="flex flex-col w-full h-full mt-10 md:mt-0 md:w-3/5 items-center justify-center">
+                    <p class="text-3xl md:text-7xl font-bold">热处理上线扫码管理</p>
+                    <p class="text-2xl md:text-6xl font-semibold mt-8" x-text="'框号:'+basket"></p>
+                </div>
+            </div>
+
+            <div class="flex flex-col flex-auto mt-8">
+                <div class="flex flex-col w-full h-full justify-center items-center">
+                    <div class="flex flex-col h-full w-full border-2">
+                        <div
+                            class="flex w-full bg-gradient-to-l from-green-400 to-blue-500 text-3xl md:text-7xl font-bold text-slate-200">
+                            <div class="flex-none z-10 p-4 text-2xl md:text-6xl">
+                                <span>结果信息:</span>
+                            </div>
+                            <div class="flex p-4 text-2xl md:text-6xl" x-text="msg">
+                                <span x-text="msg"></span>
+                            </div>
+                        </div>
+                        <div id="dmcDataList" class="w-full h-full ag-theme-alpine"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

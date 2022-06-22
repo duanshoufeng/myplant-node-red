@@ -18,30 +18,6 @@ export let ht01Zone05 = {};
 export let ht01Zone06 = {};
 export let ht01Zone07 = {};
 
-let timeId = 0;
-const inactivityTime = () => {
-  const signOut = () => {
-    // do your task here
-    localStorage.removeItem("my_token");
-    Alpine.store("currentUser").init();
-    window.location.assign("#/sign-in");
-  };
-
-  const resetTime = () => {
-    clearTimeout(timeId);
-    timeId = setTimeout(signOut, 1000 * 600); // logout after 10 mins inactivity
-  };
-
-  // events
-  window.onload = resetTime;
-  window.onclick = resetTime;
-  window.onkeypress = resetTime;
-  window.ontouchstart = resetTime;
-  window.onmousemove = resetTime;
-  window.onmousedown = resetTime;
-  window.addEventListener("scroll", resetTime, true);
-};
-
 let HeatTreatmentTemperatureCurveComponent = {
   async render() {
     // html
@@ -49,8 +25,6 @@ let HeatTreatmentTemperatureCurveComponent = {
   },
 
   async after_render() {
-    inactivityTime();
-
     try {
       ht01Zone01 = new ApexCharts(document.querySelector("#ht01Zone01"), ht01Zone01Options);
       ht01Zone01.render();

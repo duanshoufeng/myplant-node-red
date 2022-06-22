@@ -1,0 +1,54 @@
+<div x-data="MaterialFeedingService()" class="flex flex-col w-full h-full overflow-hidden">
+    <div class="flex flex-col md:flex-row justify-between w-full h-full mx-auto p-6 md:p-8">
+        <div class="flex-none text-base w-72 mr-8 overflow-y-auto">
+            <div class="text-3xl font-semibold tracking-tight leading-8 mb-8">扫码投料</div>
+            <div x-init="towerChoicesInit()" class="flex-none w-full text-left mb-4">
+                <select x-model='selectedTower' x-ref="towerSelector">
+                </select>
+                <p x-show="isTowerValid()" x-text="isTowerValid()" class="text-red-500 text-xs text-left italic">
+                </p>
+            </div>
+
+            <div x-init="isCleanChoicesInit()" class="flex-none w-full text-left mb-4">
+                <select x-model='selectedIsClean' x-ref="isCleanSelector">
+                </select>
+                <p x-show="isCleanValid()" x-text="isCleanValid()" class="text-red-500 text-xs text-left italic">
+                </p>
+            </div>
+            <div x-init="isDryChoicesInit()" class="flex-none w-full text-left mb-4">
+                <select x-model='selectedIsDry' x-ref="isDrySelector">
+                </select>
+                <p x-show="isDryValid()" x-text="isDryValid()" class="text-red-500 text-xs text-left italic">
+                </p>
+            </div>
+        </div>
+        <div class="flex flex-col w-full h-full">
+            <div class="flex flex-row text-2xl w-full h-20 bg-card">
+                <div class="flex flex-auto py-2.5 w-4/5">
+                    <input x-model="dmcInput" x-ref='dmcSelector' @keyup.enter="await onScan()"
+                        @delete-melting-charge-item.window="onDelete($event.detail)"
+                        :disabled="isTowerValid() || isCleanValid() || isDryValid() ? true : false" type="search" class="form-control relative flex-auto min-w-0 block w-full px-3
+                    py-1.5 font-normal uppercase
+                    text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition
+                    ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                        placeholder="扫描二维码...">
+                </div>
+                <div class="flex items-center w-1/5">
+                    <button @click="await onSubmit()"
+                        :disabled="isTowerValid() || isCleanValid() || isDryValid() || dmcValues.length === 0 ? true : false"
+                        :class="isTowerValid() || isCleanValid() || isDryValid() || dmcValues.length === 0 ? 'opacity-50 cursor-not-allowed' : ''"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                        保存
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-row w-full h-full py-8 bg-card">
+                <div id="dmcDataList" class="w-4/5 h-full ag-theme-alpine"></div>
+                <div class="w-1/5 h-full" id="dmcDataChart"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

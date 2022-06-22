@@ -1,0 +1,83 @@
+<div x-data="ChargeHistoryService()" class="flex flex-col w-full h-full overflow-hidden">
+    <div class="flex flex-col md:flex-row justify-between w-full h-full mx-auto p-6 md:p-8 overflow-y-auto">
+        <div class="flex-none mr-8 w-96">
+            <div class="text-3xl font-semibold tracking-tight leading-8 mb-8">投料记录查询</div>
+            <div class="text-2xl w-full">
+                <div class="w-full">
+                    <div class="text-left">开始日期</div>
+                    <div class="my-1 py-0">
+                        <input x-model="startDate" x-ref="startDate" type="date"
+                            class="choices choices__inner my-1 py-0" />
+                        <p x-show="isStartDateValid()" x-text="isStartDateValid()"
+                            class="text-red-500 text-xs text-left italic">
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="text-left">结束日期</div>
+                    <div class="my-1 py-0">
+                        <input x-model="endDate" x-ref="endDate" type="date" class="choices choices__inner my-1 py-0"" />
+                        <p x-show=" isEndDateValid()" x-text="isEndDateValid()"
+                            class="text-red-500 text-xs text-left italic">
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="text-left w-full">班次</div>
+                    <div x-init="shiftChoicesInit()" class="flex-none text-left my-1 w-full">
+                        <select x-ref="shiftSelector" multiple>
+                        </select>
+                        <p x-show="isShiftValid()" x-text="isShiftValid()"
+                            class="text-red-500 text-xs text-left italic">
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="text-left">炉号</div>
+                    <div x-init="towerChoicesInit()" class="flex-none text-left my-1">
+                        <select x-ref="towerSelector" multiple>
+                        </select>
+                        <p x-show="isTowerValid()" x-text="isTowerValid()"
+                            class="text-red-500 text-xs text-left italic">
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="flex flex-col w-full">
+            <div class="flex flex-row text-2xl w-full h-20">
+                <div class="flex items-center">
+                    <button @click="await onSubmit()"
+                        :disabled="isStartDateValid() || isEndDateValid() || isShiftValid() || isTowerValid() ? true : false"
+                        :class="isStartDateValid() || isEndDateValid() || isShiftValid() || isTowerValid()  ? 'opacity-50 cursor-not-allowed' : ''"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                        查询
+                    </button>
+                </div>
+                <div class="flex flex-auto py-2.5">
+                    <input type="search" id="filter-text" class="form-control relative flex-auto min-w-0 block w-full px-3
+                    py-1.5 text-base font-normal uppercase
+                    text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition
+                    ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                        placeholder="搜索...">
+                </div>
+            </div>
+            <div class="flex flex-col w-full h-full py-8 bg-card">
+                <div class="flex w-full h-12 justify-end bg-blue-500">
+                    <button type="button" @click="onExport()"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">导出</button>
+                </div>
+                <div id="feedingData" class="w-full h-full ag-theme-alpine"></div>
+                <div class="flex w-full ">
+
+                    <div class="flex w-full" id="feedingChart1"></div>
+                    <div class="flex w-full" id="feedingChart2"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
