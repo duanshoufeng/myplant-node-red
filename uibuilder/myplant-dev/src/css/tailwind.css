@@ -533,6 +533,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0.5rem;
 }
 
+.left-5 {
+  left: 1.25rem;
+}
+
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -781,6 +789,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-2\/5 {
   height: 40%;
+}
+
+.h-4\/5 {
+  height: 80%;
 }
 
 .h-1\/2 {
@@ -1402,6 +1414,30 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-clip-padding {
   background-clip: padding-box;
+}
+
+.fill-white {
+  fill: #fff;
+}
+
+.fill-green-300 {
+  fill: #86efac;
+}
+
+.fill-gray-300 {
+  fill: #d1d5db;
+}
+
+.fill-gray-600 {
+  fill: #4b5563;
+}
+
+.stroke-cyan-500 {
+  stroke: #06b6d4;
+}
+
+.stroke-black {
+  stroke: #000;
 }
 
 .object-cover {
@@ -2208,14 +2244,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 1;
   }
 
-  .md\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 

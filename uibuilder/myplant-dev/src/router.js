@@ -21,6 +21,7 @@ import ChargeHistoryComponent from "./views/modules/melting/charge-history/contr
 import ReturnsBasketComponent from "./views/modules/master/melting-returns-basket/controller";
 import VacuumManagerComponent from "./views/modules/melting/vacumm-manager/controller";
 import FinishedSetSearchComponent from "./views/modules/tracking/set-finished/controller";
+import LadleStateComponent from "./views/pages/dashboards/ladle-state/controller";
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
@@ -51,6 +52,10 @@ const routes = {
   },
   "/dashboards/pre-heating-storage": {
     Component: PreHeatingStorageComponent,
+    Roles: [],
+  },
+  "/dashboards/ladle-state": {
+    Component: LadleStateComponent,
     Roles: [],
   },
 

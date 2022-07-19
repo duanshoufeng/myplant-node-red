@@ -26,8 +26,9 @@ const Uib = () => {
       window.dispatchEvent(new CustomEvent("send-weight", { detail: msg.payload }));
     }
     // refresh pre heating storage dashboard
-    if (msg.topic === "pre-heating-storage-dashboard" && document.getElementById("pre-heating-storage-dashboard")) {
+    if (msg.topic === "dashboard-refresh") {
       window.dispatchEvent(new CustomEvent("update-casting-time", { detail: msg.payload }));
+      // window.dispatchEvent(new CustomEvent("update-ladle-state", { detail: msg.payload }));
     }
     // refresh heating basket uploading screen
     if (msg.topic === "heating-basket-uploading-start" && document.getElementById("heating-basket-uploading")) {
@@ -35,6 +36,9 @@ const Uib = () => {
     }
     if (msg.topic === "heating-basket-uploading-stop" && document.getElementById("heating-basket-uploading")) {
       window.dispatchEvent(new CustomEvent("heating-basket-uploading-stop", { detail: msg.payload }));
+    }
+    if (msg.topic === "update-ladle-state") {
+      window.dispatchEvent(new CustomEvent("update-ladle-state", { detail: msg.payload }));
     }
   });
 };

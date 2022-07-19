@@ -6030,7 +6030,9 @@
         "x": 1018,
         "y": 284,
         "wires": [
-            [],
+            [
+                "fdde22ef11182ca8"
+            ],
             []
         ]
     },
@@ -6068,11 +6070,238 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 754.5,
-        "y": 298,
+        "x": 757.5,
+        "y": 271,
         "wires": [
             [
                 "0fc342f101df7e83"
+            ]
+        ]
+    },
+    {
+        "id": "7e79ac45b4df46fd",
+        "type": "debug",
+        "z": "645dacd42e5b46ff",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 954.5,
+        "y": 444,
+        "wires": []
+    },
+    {
+        "id": "fdde22ef11182ca8",
+        "type": "link out",
+        "z": "645dacd42e5b46ff",
+        "name": "from frond",
+        "mode": "link",
+        "links": [
+            "b9073df109b4251e"
+        ],
+        "x": 1230,
+        "y": 346,
+        "wires": []
+    },
+    {
+        "id": "b9073df109b4251e",
+        "type": "link in",
+        "z": "645dacd42e5b46ff",
+        "name": "to uib",
+        "links": [
+            "fdde22ef11182ca8"
+        ],
+        "x": 659,
+        "y": 442,
+        "wires": [
+            [
+                "bef9fdc24fb5fb9b"
+            ]
+        ]
+    },
+    {
+        "id": "f82e5a2c00142ee2",
+        "type": "inject",
+        "z": "645dacd42e5b46ff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "update-ladle-state",
+        "payload": "",
+        "payloadType": "date",
+        "x": 535.5,
+        "y": 404,
+        "wires": [
+            [
+                "0fc342f101df7e83"
+            ]
+        ]
+    },
+    {
+        "id": "bef9fdc24fb5fb9b",
+        "type": "function",
+        "z": "645dacd42e5b46ff",
+        "name": "",
+        "func": "msg = {};\nmsg.topic = \"update-ladle-state\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 777.5,
+        "y": 441,
+        "wires": [
+            [
+                "7e79ac45b4df46fd",
+                "0fc342f101df7e83"
+            ]
+        ]
+    },
+    {
+        "id": "0383daa62a598734",
+        "type": "uibuilder",
+        "z": "645dacd42e5b46ff",
+        "name": "",
+        "topic": "",
+        "url": "myplant-app",
+        "fwdInMessages": false,
+        "allowScripts": false,
+        "allowStyles": false,
+        "copyIndex": true,
+        "templateFolder": "blank",
+        "extTemplate": "",
+        "showfolder": false,
+        "reload": false,
+        "sourceFolder": "src",
+        "deployedVersion": "5.0.0",
+        "x": 1038,
+        "y": 603,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8390fe0e1265ce4f",
+        "type": "watch",
+        "z": "645dacd42e5b46ff",
+        "name": "",
+        "files": "C:\\\\Users\\\\jduan\\\\.node-red\\\\projects\\\\myplant-node-red\\\\uibuilder\\\\myplant-app\\\\src",
+        "recursive": true,
+        "x": 370,
+        "y": 583,
+        "wires": [
+            [
+                "4ac3a3914811b969"
+            ]
+        ]
+    },
+    {
+        "id": "4ac3a3914811b969",
+        "type": "change",
+        "z": "645dacd42e5b46ff",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "_uib",
+                "pt": "msg",
+                "to": "{\"reload\":true}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 777.5,
+        "y": 586,
+        "wires": [
+            [
+                "0383daa62a598734"
+            ]
+        ]
+    },
+    {
+        "id": "b58a741ff4fbe41a",
+        "type": "uibuilder",
+        "z": "645dacd42e5b46ff",
+        "name": "",
+        "topic": "",
+        "url": "myplant",
+        "fwdInMessages": false,
+        "allowScripts": false,
+        "allowStyles": false,
+        "copyIndex": true,
+        "templateFolder": "blank",
+        "extTemplate": "",
+        "showfolder": false,
+        "reload": false,
+        "sourceFolder": "src",
+        "deployedVersion": "5.0.0",
+        "x": 988,
+        "y": 93,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "94b0859b6ebd959f",
+        "type": "watch",
+        "z": "645dacd42e5b46ff",
+        "name": "",
+        "files": "C:\\\\Users\\\\jduan\\\\.node-red\\\\projects\\\\myplant-node-red\\\\uibuilder\\\\myplant\\\\src",
+        "recursive": true,
+        "x": 343,
+        "y": 104,
+        "wires": [
+            [
+                "8c1da0955c246127"
+            ]
+        ]
+    },
+    {
+        "id": "8c1da0955c246127",
+        "type": "change",
+        "z": "645dacd42e5b46ff",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "_uib",
+                "pt": "msg",
+                "to": "{\"reload\":true}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 758,
+        "y": 90,
+        "wires": [
+            [
+                "b58a741ff4fbe41a"
             ]
         ]
     }

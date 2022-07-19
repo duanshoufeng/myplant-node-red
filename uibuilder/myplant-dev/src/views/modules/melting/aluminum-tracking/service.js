@@ -50,21 +50,37 @@ window.AluminumTrackingService = () => {
     isLadleNumberValid() {
       const isEmpty = validator.isEmpty(this.ladleNumber, { ignore_whitespace: true });
       if (isEmpty) return i18next.t("tk_ladle_number_is_required");
+      const isFormat = this.ladleNumber.toUpperCase().startsWith("NCHQ-MTLD-");
+      if (!isFormat) return "中转包编号格式错误";
+      const isInt = validator.isInt(this.ladleNumber.split("-")[2]);
+      if (!isInt) return "中转包编号格式错误";
       return null;
     },
     isTowerNumberValid() {
       const isEmpty = validator.isEmpty(this.towerNumber, { ignore_whitespace: true });
       if (isEmpty) return i18next.t("tk_tower_number_is_required");
+      const isFormat = this.towerNumber.toUpperCase().startsWith("NCHQ-MELT-");
+      if (!isFormat) return "熔炼炉编号格式错误";
+      const isInt = validator.isInt(this.towerNumber.split("-")[2]);
+      if (!isInt) return "熔炼炉编号格式错误";
       return null;
     },
     isDegassMachineNumberValid() {
       const isEmpty = validator.isEmpty(this.degassMachineNumber, { ignore_whitespace: true });
       if (isEmpty) return i18next.t("tk_degass_machine_number_is_required");
+      const isFormat = this.degassMachineNumber.toUpperCase().startsWith("NCHQ-DGGS-");
+      if (!isFormat) return "除气机编号格式错误";
+      const isInt = validator.isInt(this.degassMachineNumber.split("-")[2]);
+      if (!isInt) return "除气机编号格式错误";
       return null;
     },
     isFurnaceNumberValid() {
       const isEmpty = validator.isEmpty(this.furnaceNumber, { ignore_whitespace: true });
       if (isEmpty) return i18next.t("tk_furnace_number_is_required");
+      const isFormat = this.furnaceNumber.toUpperCase().startsWith("NCHQ-HPDC-");
+      if (!isFormat) return "定量炉编号格式错误";
+      const isInt = validator.isInt(this.furnaceNumber.split("-")[2]);
+      if (!isInt) return "定量炉编号格式错误";
       return null;
     },
     selectedMachine: { value: "" },
@@ -135,7 +151,7 @@ window.AluminumTrackingService = () => {
         let data = {
           machine: parseInt(this.selectedMachine.value),
           product: this.selectedProduct.value,
-          ladle: isNaN(parseInt(this.ladleNumber)) ? 0 : parseInt(this.ladleNumber),
+          ladle: isNaN(parseInt(this.ladleNumber.split("-")[2])) ? 0 : parseInt(this.ladleNumber.split("-")[2]),
         };
         let response = await http.post(`/api/melting/aluminum/process-step`, data);
         const nextStep = response.data.nextStep;
@@ -154,7 +170,7 @@ window.AluminumTrackingService = () => {
     async onSecondSubmit() {
       try {
         let rawData = {
-          tower: isNaN(parseInt(this.towerNumber)) ? 0 : parseInt(this.towerNumber),
+          tower: isNaN(parseInt(this.towerNumber.split("-")[2])) ? 0 : parseInt(this.towerNumber.split("-")[2]),
           aluminumWeight: isNaN(parseInt(this.selectedAluminumWeight.value))
             ? 0
             : parseInt(this.selectedAluminumWeight.value),
@@ -164,11 +180,14 @@ window.AluminumTrackingService = () => {
         let data = {
           machine: parseInt(this.selectedMachine.value),
           product: this.selectedProduct.value,
-          ladle: isNaN(parseInt(this.ladleNumber)) ? 0 : parseInt(this.ladleNumber),
-          tower: isNaN(parseInt(this.towerNumber)) ? 0 : parseInt(this.towerNumber),
+          ladle: isNaN(parseInt(this.ladleNumber.split("-")[2])) ? 0 : parseInt(this.ladleNumber.split("-")[2]),
+          tower: isNaN(parseInt(this.towerNumber.split("-")[2])) ? 0 : parseInt(this.towerNumber.split("-")[2]),
           rawData: JSON.stringify(rawData),
         };
         await http.post(`/api/melting/aluminum/export`, data);
+
+        uibuilder.send({ topic: "update-ladle-state", payload: data });
+
         this.onReset();
         Utils.info(i18next.t("tk_aluminum_export_finished"));
       } catch (error) {
@@ -179,39 +198,49 @@ window.AluminumTrackingService = () => {
     async onThirdSubmit() {
       try {
         let rawData = {
-          degassMachine: isNaN(parseInt(this.degassMachineNumber)) ? 0 : parseInt(this.degassMachineNumber),
+          degassMachine: isNaN(parseInt(this.degassMachineNumber.split("-")[2]))
+            ? 0
+            : parseInt(this.degassMachineNumber.split("-")[2]),
           aluminumTempAfter: isNaN(parseInt(this.aluminumTempAfter)) ? 0 : parseInt(this.aluminumTempAfter),
           personId: parseInt(this.$store.currentUser.profile.PersonId),
         };
         let data = {
           machine: parseInt(this.selectedMachine.value),
           product: this.selectedProduct.value,
-          ladle: isNaN(parseInt(this.ladleNumber)) ? 0 : parseInt(this.ladleNumber),
-          degassMachine: isNaN(parseInt(this.degassMachineNumber)) ? 0 : parseInt(this.degassMachineNumber),
+          ladle: isNaN(parseInt(this.ladleNumber.split("-")[2])) ? 0 : parseInt(this.ladleNumber.split("-")[2]),
+          degassMachine: isNaN(parseInt(this.degassMachineNumber.split("-")[2]))
+            ? 0
+            : parseInt(this.degassMachineNumber.split("-")[2]),
           rawData: JSON.stringify(rawData),
         };
         await http.post(`/api/melting/aluminum/degassing`, data);
+
+        uibuilder.send({ topic: "update-ladle-state", payload: data });
+
         this.onReset();
         Utils.info(i18next.t("tk_aluminum_degassing_finished"));
       } catch (error) {
-        Utils.info(i18next.t("tk_wrong_degass_machine"));
+        Utils.info("除气机错误");
         Utils.log(error);
       }
     },
     async onFourthSubmit() {
       try {
         let rawData = {
-          furnace: isNaN(parseInt(this.furnaceNumber)) ? 0 : parseInt(this.furnaceNumber),
+          furnace: isNaN(parseInt(this.furnaceNumber.split("-")[2])) ? 0 : parseInt(this.furnaceNumber.split("-")[2]),
           personId: parseInt(this.$store.currentUser.profile.PersonId),
         };
         let data = {
           machine: parseInt(this.selectedMachine.value),
           product: this.selectedProduct.value,
-          ladle: isNaN(parseInt(this.ladleNumber)) ? 0 : parseInt(this.ladleNumber),
-          furnace: isNaN(parseInt(this.furnaceNumber)) ? 0 : parseInt(this.furnaceNumber),
+          ladle: isNaN(parseInt(this.ladleNumber.split("-")[2])) ? 0 : parseInt(this.ladleNumber.split("-")[2]),
+          furnace: isNaN(parseInt(this.furnaceNumber.split("-")[2])) ? 0 : parseInt(this.furnaceNumber.split("-")[2]),
           rawData: JSON.stringify(rawData),
         };
         await http.post(`/api/melting/aluminum/charging`, data);
+
+        uibuilder.send({ topic: "update-ladle-state", payload: data });
+
         this.onReset();
         Utils.info(i18next.t("tk_aluminum_charging_finished"));
       } catch (error) {

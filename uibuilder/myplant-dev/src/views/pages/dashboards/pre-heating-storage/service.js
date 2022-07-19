@@ -18,7 +18,6 @@ window.PreHeatingStorageService = () => {
         let room05Data = response.data.filter((x) => x.Room === "NCHQ-PHT-105");
         room01Options.api.setRowData(room01Data);
         room02Options.api.setRowData(room02Data);
-        console.log(room02Data);
         room03Options.api.setRowData(room03Data);
         room04Options.api.setRowData(room04Data);
         room05Options.api.setRowData(room05Data);

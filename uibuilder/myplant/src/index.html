@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>MyPlant</title>
+    <meta name="description" content="Node-RED uibuilder tailwindcss alpinejs opcua iot i4.0 ag-grid apexcharts">
+    <link rel="icon" href="./images/favicon.ico">
+
+    <!-- Your own CSS -->
+    <link type="text/css" rel="stylesheet" href="./css/styles.css" media="all">
+</head>
+
+<body x-data="{ darkMode: false }"
+    x-init="document.body.style.height = window.innerHeight + 'px'; darkMode = JSON.parse(localStorage.getItem('darkMode'));$watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    class="flex m-0 p-0 items-start text-center w-screen overflow-hidden" :class="{'dark': darkMode === true}">
+
+    <div id="page" class="flex flex-col w-full h-full min-w-0">
+        <aside id="sidebar"></aside>
+        <header id="header" class="flex w-full z-10"></header>
+        <main id="content" class="flex flex-grow w-full overflow-hidden">
+            <splash-screen>
+                <img src="../uibuilder/common/images/noris.svg" alt="NORIS">
+                <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+            </splash-screen>
+        </main>
+    </div>
+
+    <script src="../uibuilder/vendor/socket.io/socket.io.js"></script>
+    <script src="./uibuilderfe.min.js"></script>
+    <script src="./dist/bundle.js"></script>
+
+</body>
+
+</html>

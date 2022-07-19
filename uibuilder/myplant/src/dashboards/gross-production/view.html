@@ -1,0 +1,17 @@
+<div x-data="_dashboards_gross_production()" x-init="await onInit()"
+    class="flex items-center w-full h-full bg-gray-100 dark:bg-gray-800 overflow-hidden">
+
+    <div class="flex w-full h-full p-6 md:p-8 overflow-hidden">
+        <div class="flex flex-col w-full h-full bg-white rounded-2xl dark:bg-gray-700 overflow-hidden">
+            <div class="flex items-start justify-between m-6 mb-0">
+                <div class="text-lg font-medium tracking-tight leading-6 truncate"
+                    x-text="i18next.t('tk_gross_casting')">
+                </div>
+            </div>
+            <div class="flex flex-col flex-auto">
+                <div class="relative flex-auto w-full h-full" id="gross-casting"></div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,56 @@
+{
+  "name": "uib-blank",
+  "version": "5.0.0",
+  "private": true,
+  "description": "This is about the simplest template you can get for uibuilder.",
+  "scripts": {
+    "start": "concurrently npm:watch:*",
+    "watch:css": "tailwindcss build -i ./tailwind.css -o ./src/css/tailwind.css --watch",
+    "watch:js": "npx webpack -w --config webpack.config.js"
+  },
+  "keywords": [
+    "uibuilder",
+    "node-red",
+    "node-red-contrib-uibuilder"
+  ],
+  "author": "Julian Knight (Totally Information)",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/TotallyInformation/node-red-contrib-uibuilder",
+  "bugs": "https://github.com/TotallyInformation/node-red-contrib-uibuilder/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TotallyInformation/node-red-contrib-uibuilder.git"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
+  "devDependencies": {
+    "@types/alpinejs": "^3.7.0",
+    "@types/lodash": "^4.14.182",
+    "@types/nprogress": "^0.2.0",
+    "@types/toastify-js": "^1.11.1",
+    "@types/validator": "^13.7.4",
+    "concurrently": "^7.2.2",
+    "source-map-loader": "^4.0.0",
+    "tailwindcss": "^3.1.4",
+    "ts-loader": "^9.3.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "alpinejs": "^3.10.2",
+    "apexcharts": "^3.35.3",
+    "axios": "^0.27.2",
+    "i18next": "^21.8.12",
+    "i18next-http-backend": "^1.4.1",
+    "mburger-webcomponent": "^3.1.1",
+    "mmenu-js": "^9.1.6",
+    "multi-menu": "^0.1.2",
+    "nprogress": "^0.2.0",
+    "rxjs": "^7.5.6",
+    "toastify-js": "^1.11.2",
+    "validator": "^13.7.0"
+  }
+}
